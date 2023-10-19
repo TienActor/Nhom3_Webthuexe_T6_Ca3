@@ -1,4 +1,4 @@
-<h1 align="center">Đây là một project cho một website thuê ô tô 🚗🚗.</h1>
+<h1 align="center">Dực án thiết kế và tạo website thuê ô tô 🚗🚗.</h1>
 
 ###
 
@@ -37,7 +37,8 @@
 </div>
 
 ###
-
+<h3> Các công cụ hỗ trợ tạo và phát triển dự án </h3>
+<br>
 <div align="left">
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" height="40" alt="csharp logo"  />
   <img width="12" />
