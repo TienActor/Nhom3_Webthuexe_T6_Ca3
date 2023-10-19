@@ -1,0 +1,212 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ThueXeModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="bill">
+    <Key>
+      <PropertyRef Name="id_bill" />
+    </Key>
+    <Property Name="id_bill" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="id_rent" Type="Int32" Nullable="false" />
+    <Property Name="money_hour" Type="Int32" />
+    <Property Name="date_start" Type="DateTime" Precision="3" />
+    <Property Name="date_end" Type="DateTime" Precision="3" />
+    <Property Name="status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="rent" Relationship="Self.FK_bill_rent" FromRole="bill" ToRole="rent" />
+  </EntityType>
+  <EntityType Name="car">
+    <Key>
+      <PropertyRef Name="id_cars" />
+    </Key>
+    <Property Name="id_cars" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="image" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="price" Type="Int32" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="id_type" Type="Int32" />
+    <Property Name="id_seat" Type="Int32" />
+    <Property Name="Hot" Type="Boolean" />
+    <Property Name="describe" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="consume" Type="String" MaxLength="30" FixedLength="true" Unicode="true" />
+    <Property Name="status" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <NavigationProperty Name="seat" Relationship="Self.FK_cars_seat" FromRole="cars" ToRole="seat" />
+    <NavigationProperty Name="type" Relationship="Self.FK_cars_type" FromRole="cars" ToRole="type" />
+    <NavigationProperty Name="rentDetails" Relationship="Self.FK_rentDetails_cars" FromRole="cars" ToRole="rentDetails" />
+  </EntityType>
+  <EntityType Name="contact">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="address" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="phone" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="facebook_link" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="employee">
+    <Key>
+      <PropertyRef Name="id_employee" />
+    </Key>
+    <Property Name="id_employee" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="account" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="pass" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="fulControl" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="KhachHang">
+    <Key>
+      <PropertyRef Name="maKH" />
+    </Key>
+    <Property Name="maKH" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="hoTenKH" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="emailKH" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="sdtKH" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="diaChiKH" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="matKhau" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="mail">
+    <Key>
+      <PropertyRef Name="ContactId" />
+    </Key>
+    <Property Name="ContactId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Phone" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Message" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="IsRead" Type="Boolean" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="rent">
+    <Key>
+      <PropertyRef Name="id_rent" />
+    </Key>
+    <Property Name="id_rent" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="note" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="phone" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="mail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="date" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="bills" Relationship="Self.FK_bill_rent" FromRole="rent" ToRole="bill" />
+    <NavigationProperty Name="rentDetails" Relationship="Self.FK_rentDetails_rent" FromRole="rent" ToRole="rentDetails" />
+  </EntityType>
+  <EntityType Name="rentDetail">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="id_rent" Type="Int32" Nullable="false" />
+    <Property Name="id_cars" Type="Int32" />
+    <Property Name="amount" Type="Int32" />
+    <NavigationProperty Name="car" Relationship="Self.FK_rentDetails_cars" FromRole="rentDetails" ToRole="cars" />
+    <NavigationProperty Name="rent" Relationship="Self.FK_rentDetails_rent" FromRole="rentDetails" ToRole="rent" />
+  </EntityType>
+  <EntityType Name="seat">
+    <Key>
+      <PropertyRef Name="id_seat" />
+    </Key>
+    <Property Name="id_seat" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="seat_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="cars" Relationship="Self.FK_cars_seat" FromRole="seat" ToRole="cars" />
+  </EntityType>
+  <EntityType Name="type">
+    <Key>
+      <PropertyRef Name="id_type" />
+    </Key>
+    <Property Name="id_type" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="type1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="price_day" Type="Int32" />
+    <Property Name="price_month" Type="Int32" />
+    <Property Name="image" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="cars" Relationship="Self.FK_cars_type" FromRole="type" ToRole="cars" />
+  </EntityType>
+  <Association Name="FK_bill_rent">
+    <End Role="rent" Type="Self.rent" Multiplicity="1" />
+    <End Role="bill" Type="Self.bill" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="rent">
+        <PropertyRef Name="id_rent" />
+      </Principal>
+      <Dependent Role="bill">
+        <PropertyRef Name="id_rent" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_cars_seat">
+    <End Role="seat" Type="Self.seat" Multiplicity="0..1" />
+    <End Role="cars" Type="Self.car" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="seat">
+        <PropertyRef Name="id_seat" />
+      </Principal>
+      <Dependent Role="cars">
+        <PropertyRef Name="id_seat" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_cars_type">
+    <End Role="type" Type="Self.type" Multiplicity="0..1" />
+    <End Role="cars" Type="Self.car" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="type">
+        <PropertyRef Name="id_type" />
+      </Principal>
+      <Dependent Role="cars">
+        <PropertyRef Name="id_type" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_rentDetails_cars">
+    <End Role="cars" Type="Self.car" Multiplicity="0..1" />
+    <End Role="rentDetails" Type="Self.rentDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="cars">
+        <PropertyRef Name="id_cars" />
+      </Principal>
+      <Dependent Role="rentDetails">
+        <PropertyRef Name="id_cars" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_rentDetails_rent">
+    <End Role="rent" Type="Self.rent" Multiplicity="1" />
+    <End Role="rentDetails" Type="Self.rentDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="rent">
+        <PropertyRef Name="id_rent" />
+      </Principal>
+      <Dependent Role="rentDetails">
+        <PropertyRef Name="id_rent" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="ThueXeEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="bills" EntityType="Self.bill" />
+    <EntitySet Name="cars" EntityType="Self.car" />
+    <EntitySet Name="contacts" EntityType="Self.contact" />
+    <EntitySet Name="employees" EntityType="Self.employee" />
+    <EntitySet Name="KhachHangs" EntityType="Self.KhachHang" />
+    <EntitySet Name="mails" EntityType="Self.mail" />
+    <EntitySet Name="rents" EntityType="Self.rent" />
+    <EntitySet Name="rentDetails" EntityType="Self.rentDetail" />
+    <EntitySet Name="seats" EntityType="Self.seat" />
+    <EntitySet Name="types" EntityType="Self.type" />
+    <AssociationSet Name="FK_bill_rent" Association="Self.FK_bill_rent">
+      <End Role="rent" EntitySet="rents" />
+      <End Role="bill" EntitySet="bills" />
+    </AssociationSet>
+    <AssociationSet Name="FK_cars_seat" Association="Self.FK_cars_seat">
+      <End Role="seat" EntitySet="seats" />
+      <End Role="cars" EntitySet="cars" />
+    </AssociationSet>
+    <AssociationSet Name="FK_cars_type" Association="Self.FK_cars_type">
+      <End Role="type" EntitySet="types" />
+      <End Role="cars" EntitySet="cars" />
+    </AssociationSet>
+    <AssociationSet Name="FK_rentDetails_cars" Association="Self.FK_rentDetails_cars">
+      <End Role="cars" EntitySet="cars" />
+      <End Role="rentDetails" EntitySet="rentDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_rentDetails_rent" Association="Self.FK_rentDetails_rent">
+      <End Role="rent" EntitySet="rents" />
+      <End Role="rentDetails" EntitySet="rentDetails" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

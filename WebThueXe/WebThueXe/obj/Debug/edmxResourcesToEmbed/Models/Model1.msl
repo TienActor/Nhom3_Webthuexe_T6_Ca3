@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ThueXeModelStoreContainer" CdmEntityContainer="ThueXeEntities">
+    <EntitySetMapping Name="bills">
+      <EntityTypeMapping TypeName="ThueXeModel.bill">
+        <MappingFragment StoreEntitySet="bill">
+          <ScalarProperty Name="id_bill" ColumnName="id_bill" />
+          <ScalarProperty Name="id_rent" ColumnName="id_rent" />
+          <ScalarProperty Name="money_hour" ColumnName="money_hour" />
+          <ScalarProperty Name="date_start" ColumnName="date_start" />
+          <ScalarProperty Name="date_end" ColumnName="date_end" />
+          <ScalarProperty Name="status" ColumnName="status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="cars">
+      <EntityTypeMapping TypeName="ThueXeModel.car">
+        <MappingFragment StoreEntitySet="cars">
+          <ScalarProperty Name="id_cars" ColumnName="id_cars" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="image" ColumnName="image" />
+          <ScalarProperty Name="price" ColumnName="price" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="id_type" ColumnName="id_type" />
+          <ScalarProperty Name="id_seat" ColumnName="id_seat" />
+          <ScalarProperty Name="Hot" ColumnName="Hot" />
+          <ScalarProperty Name="describe" ColumnName="describe" />
+          <ScalarProperty Name="consume" ColumnName="consume" />
+          <ScalarProperty Name="status" ColumnName="status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="contacts">
+      <EntityTypeMapping TypeName="ThueXeModel.contact">
+        <MappingFragment StoreEntitySet="contact">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="address" ColumnName="address" />
+          <ScalarProperty Name="phone" ColumnName="phone" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="facebook_link" ColumnName="facebook_link" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="employees">
+      <EntityTypeMapping TypeName="ThueXeModel.employee">
+        <MappingFragment StoreEntitySet="employee">
+          <ScalarProperty Name="id_employee" ColumnName="id_employee" />
+          <ScalarProperty Name="account" ColumnName="account" />
+          <ScalarProperty Name="pass" ColumnName="pass" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="fulControl" ColumnName="fulControl" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="KhachHangs">
+      <EntityTypeMapping TypeName="ThueXeModel.KhachHang">
+        <MappingFragment StoreEntitySet="KhachHang">
+          <ScalarProperty Name="maKH" ColumnName="maKH" />
+          <ScalarProperty Name="hoTenKH" ColumnName="hoTenKH" />
+          <ScalarProperty Name="emailKH" ColumnName="emailKH" />
+          <ScalarProperty Name="sdtKH" ColumnName="sdtKH" />
+          <ScalarProperty Name="diaChiKH" ColumnName="diaChiKH" />
+          <ScalarProperty Name="matKhau" ColumnName="matKhau" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="mails">
+      <EntityTypeMapping TypeName="ThueXeModel.mail">
+        <MappingFragment StoreEntitySet="mail">
+          <ScalarProperty Name="ContactId" ColumnName="ContactId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Message" ColumnName="Message" />
+          <ScalarProperty Name="IsRead" ColumnName="IsRead" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="rents">
+      <EntityTypeMapping TypeName="ThueXeModel.rent">
+        <MappingFragment StoreEntitySet="rent">
+          <ScalarProperty Name="id_rent" ColumnName="id_rent" />
+          <ScalarProperty Name="note" ColumnName="note" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="phone" ColumnName="phone" />
+          <ScalarProperty Name="mail" ColumnName="mail" />
+          <ScalarProperty Name="date" ColumnName="date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="rentDetails">
+      <EntityTypeMapping TypeName="ThueXeModel.rentDetail">
+        <MappingFragment StoreEntitySet="rentDetails">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="id_rent" ColumnName="id_rent" />
+          <ScalarProperty Name="id_cars" ColumnName="id_cars" />
+          <ScalarProperty Name="amount" ColumnName="amount" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="seats">
+      <EntityTypeMapping TypeName="ThueXeModel.seat">
+        <MappingFragment StoreEntitySet="seat">
+          <ScalarProperty Name="id_seat" ColumnName="id_seat" />
+          <ScalarProperty Name="seat_name" ColumnName="seat_name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="types">
+      <EntityTypeMapping TypeName="ThueXeModel.type">
+        <MappingFragment StoreEntitySet="type">
+          <ScalarProperty Name="id_type" ColumnName="id_type" />
+          <ScalarProperty Name="type1" ColumnName="type" />
+          <ScalarProperty Name="price_day" ColumnName="price_day" />
+          <ScalarProperty Name="price_month" ColumnName="price_month" />
+          <ScalarProperty Name="image" ColumnName="image" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

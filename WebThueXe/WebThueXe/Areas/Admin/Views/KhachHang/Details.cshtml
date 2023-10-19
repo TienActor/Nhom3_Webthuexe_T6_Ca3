@@ -1,0 +1,62 @@
+﻿﻿@model WebThueXe.Models.KhachHang
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/Admin/Views/Shared/Layout_Admin.cshtml";
+}
+
+<ol class="breadcrumb">
+    <li class="breadcrumb-item">
+        <a href="@Url.Action("Index","Index")">Admin</a>
+    </li>
+    <li class="breadcrumb-item active">Chi tiết khách hàng</li>
+</ol>
+
+<div>
+    <dl class="dl-horizontal">
+        <dt>
+            Tài khoản
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.maKH)
+        </dd>
+
+        <dt>
+            Họ tên
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.hoTenKH)
+        </dd>
+
+        <dt>
+            Email
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.emailKH)
+        </dd>
+
+        <dt>
+            Số ĐT
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.sdtKH)
+        </dd>
+
+        <dt>
+            Địa chỉ
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.diaChiKH)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.maKH }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
