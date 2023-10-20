@@ -7,14 +7,14 @@
 
 <h2 align="left">Mục lục:</h2>
 <ul>
-  <li><a href="#i.Giới thiệu đề tài">I.Giới thiệu đề tài</a></li>
+  <li><a href="#1">I.Giới thiệu đề tài</a></li>
   <li><a href="#2">II. Mục tiêu chính</a></li>
   <li><a href="#3">III. Các tính năng chính</a></li>
   <li><a href="#4">IVCác công cụ hỗ trợ tạo và phát triển dự án</a></li>
   <li><a href="#5">V.Các thành viên trong nhóm</a></li>
 </ul>
 
-<h3 id="1" align="left">I. Giới thiệu đề tài:</h3>
+<h3 id="1" align="left">I. Giới thiệu đề tài</h3>
 <p>Trong thời đại số hóa như hiện nay, nhu cầu di chuyển và du lịch ngày càng gia tăng. Đồng thời, không phải ai cũng muốn sở hữu một chiếc xe riêng vì nhiều lý do như: tài chính, không gian đỗ xe, hoặc chỉ cần xe trong thời gian ngắn. Đây chính là lúc mà dịch vụ thuê xe ô tô trực tuyến trở nên cần thiết và tiện ích.</p>
 <p>Website Thuê Xe Ô Tô của chúng tôi ra đời nhằm đáp ứng nhu cầu đó. Với giao diện thân thiện và dễ sử dụng, người dùng có thể dễ dàng tìm kiếm, so sánh và thuê một chiếc xe mà họ mong muốn một cách nhanh chóng và tiện lợi.</p>
 <h3>Tại sao chọn chúng tôi?</h3>
@@ -27,7 +27,7 @@
 <h4>Qua đề tài này, chúng tôi mong muốn mang đến một giải pháp thuê xe trực tuyến hiệu quả, đáng tin cậy và dễ dàng tiếp cận cho mọi người.</h4>
 
 
-<h3 id="2" align="left">II. Mục tiêu chính:</h3>
+<h3 id="2" align="left">II. Mục tiêu chính</h3>
 <ol>
   <li>Giúp khách hàng xem những loại ô tô đang cho thuê trên website.</li>
   <li>Hỗ trợ khách hàng đặt trước ô tô mình muốn.</li>
