@@ -75,3 +75,21 @@
 <p align="left">👨‍💻 Nguyễn Nhật Tiến - 100%<br>🧑‍💻 Nguyễn Hữu Thọ - 100%<br>👨‍💻 Trương Thanh Bình - 100%<br>🧑‍💻 Vũ Đức Nam - 100%</p>
 
 ###
+
+<h3 align="left">Những thứ chưa làm được:</h3>
+
+###
+
+<p align="left">1. </p>
+
+###
+
+<p align="left">2. </p>
+
+###
+
+<p align="left">3. </p>
+
+###
+
+<p align="left">4. </p>
