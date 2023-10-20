@@ -89,7 +89,7 @@
       <td>Vũ Đức Nam</td>
       <td>21DH112701</td>
       <td>100%</td>
-       <th>Team leadProduct owner,Dev</th>
+       <th>Team lead,Dev</th>
     </tr>
     <tr>
       <td>Nguyễn Nhật Tiến</td>
