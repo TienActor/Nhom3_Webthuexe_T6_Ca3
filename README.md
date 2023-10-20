@@ -71,7 +71,7 @@
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" height="40" alt="github logo" />
 </div>
 
-### V. Các thành viên trong nhóm🧑‍💻🧑‍💻🧑‍💻🧑‍💻(4 người):</h4> <a name="thanh-vien"></a>
+### V. Các thành viên trong nhóm🧑‍💻🧑‍💻🧑‍💻🧑‍💻(4 người): </h4> <a name="thanh-vien"></a>
 <table>
 <table>
   <thead>
