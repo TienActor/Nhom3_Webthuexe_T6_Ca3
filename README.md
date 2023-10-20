@@ -2,7 +2,7 @@
 
 <h2 align="left">Mục lục:</h2>
 <ul>
-  <li><a href="#de-tai">Giới thiệu đề tại</a></li>
+  <li><a href="#de-tai">Giới thiệu đề tài</a></li>
   <li><a href="#muc-tieu-chinh">Mục tiêu chính</a></li>
   <li><a href="#admin">Dành cho Admin</a></li>
   <li><a href="#cong-cu">Các công cụ hỗ trợ tạo và phát triển dự án</a></li>
