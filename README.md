@@ -17,7 +17,7 @@
 <h3 id="de-tai" align="left">Giới thiệu đề tài:</h3>
 <p>Trong thời đại số hóa như hiện nay, nhu cầu di chuyển và du lịch ngày càng gia tăng. Đồng thời, không phải ai cũng muốn sở hữu một chiếc xe riêng vì nhiều lý do như: tài chính, không gian đỗ xe, hoặc chỉ cần xe trong thời gian ngắn. Đây chính là lúc mà dịch vụ thuê xe ô tô trực tuyến trở nên cần thiết và tiện ích.</p>
 <p>Website Thuê Xe Ô Tô của chúng tôi ra đời nhằm đáp ứng nhu cầu đó. Với giao diện thân thiện và dễ sử dụng, người dùng có thể dễ dàng tìm kiếm, so sánh và thuê một chiếc xe mà họ mong muốn một cách nhanh chóng và tiện lợi.</p>
-<h4>Tại sao chọn chúng tôi?</h4>
+<h3>Tại sao chọn chúng tôi?</h3>
 <ul>
   <li><strong>Đa dạng mẫu mã:</strong> Cung cấp nhiều mẫu xe từ các thương hiệu hàng đầu.</li>
   <li><strong>Trải nghiệm đơn giản, mượt mà:</strong> Giao diện trực quan giúp người dùng dễ dàng thao tác và thuê xe.</li>
