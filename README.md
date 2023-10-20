@@ -83,6 +83,7 @@
       <th>Tên</th>
       <th>MSSV</th>
       <th>%</th>
+       <th>Vai trò</th>
     </tr>
   </thead>
   <tbody>
@@ -90,21 +91,25 @@
       <td>Nguyễn Nhật Tiến</td>
       <td>21DH113015</td>
       <td>100%</td>
+       <th>Team lead,Dev</th>
     </tr>
     <tr>
       <td>Nguyễn Hữu Thọ</td>
       <td>21DH114158</td>
       <td>100%</td>
+       <th>Dev chính</th>
     </tr>
     <tr>
       <td>Trương Thanh Bình</td>
       <td>21DH113051</td>
       <td>100%</td>
+       <th>Scrum master,Dev</th>
     </tr>
     <tr>
       <td>Vũ Đức Nam</td>
       <td>21DH112701</td>
       <td>100%</td>
+       <th>Product owner,Dev</th>
     </tr>
   </tbody>
 </table>
