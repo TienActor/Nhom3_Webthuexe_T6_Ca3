@@ -52,7 +52,6 @@
 
 <h3 id="cong-cu">Các công cụ hỗ trợ tạo và phát triển dự án</h3>
 <div align="left">
-<div align="left">
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" height="40" alt="csharp logo" />
   <img width="12" />
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" height="40" alt="css3 logo" />
@@ -72,7 +71,6 @@
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" height="40" alt="git logo" />
   <img width="12" />
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" height="40" alt="github logo" />
-</div>
 </div>
 
 <h4 id="thanh-vien" align="left">Các thành viên trong nhóm🧑‍💻🧑‍💻🧑‍💻🧑‍💻(4 người):</h4>
