@@ -86,10 +86,16 @@
   </thead>
   <tbody>
     <tr>
+      <td>Vũ Đức Nam</td>
+      <td>21DH112701</td>
+      <td>100%</td>
+       <th>Team leadProduct owner,Dev</th>
+    </tr>
+    <tr>
       <td>Nguyễn Nhật Tiến</td>
       <td>21DH113015</td>
       <td>100%</td>
-       <th>Team lead,Dev</th>
+       <th>Product owner,Dev</th>
     </tr>
     <tr>
       <td>Nguyễn Hữu Thọ</td>
@@ -102,12 +108,6 @@
       <td>21DH113051</td>
       <td>100%</td>
        <th>Scrum master,Dev</th>
-    </tr>
-    <tr>
-      <td>Vũ Đức Nam</td>
-      <td>21DH112701</td>
-      <td>100%</td>
-       <th>Product owner,Dev</th>
     </tr>
   </tbody>
 </table>
