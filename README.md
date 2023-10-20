@@ -7,11 +7,11 @@
 
 <h2 align="left">Mục lục:</h2>
 <ul>
-  <li><a href="#detai">I. Giới thiệu đề tài</a></li>
-  <li><a href="#muctieu">II. Mục tiêu chính</a></li>
-  <li><a href="#tinhnang">III. Các tính năng chính</a></li>
-  <li><a href="#congcu">IV. Các công cụ hỗ trợ tạo và phát triển dự án</a></li>
-  <li><a href="#thanhvien">V. Các thành viên trong nhóm</a></li>
+  <li><a href="detai">I. Giới thiệu đề tài</a></li>
+  <li><a href="muctieu">II. Mục tiêu chính</a></li>
+  <li><a href="tinhnang">III. Các tính năng chính</a></li>
+  <li><a href="congcu">IV. Các công cụ hỗ trợ tạo và phát triển dự án</a></li>
+  <li><a href="thanhvien">V. Các thành viên trong nhóm</a></li>
 </ul>
 
 <h3 id="detai" align="left">I. Giới thiệu đề tài</h3>
