@@ -1,10 +1,15 @@
 <h1 align="center">Dự án thiết kế và tạo website thuê ô tô 🚗🚗</h1>
 
+<div align="center">
+  <img height="200" src="https://cdn.discordapp.com/attachments/1089969551896219728/1164584424025886853/image.png?ex=6543bec3&is=653149c3&hm=7b22695f01abb570152bcabe3c58d5fe6e213dd6d08cf93f75037cff4d764543&" />
+  <img height="200" src="https://cdn.discordapp.com/attachments/1089969551896219728/1164583925469950132/bg_3.jpg?ex=6543be4c&is=6531494c&hm=ffa01b679f000e40d82f91c1013a248fceee933196f59164fb8a9b37e7a69f98&" />
+</div>
+
 <h2 align="left">Mục lục:</h2>
 <ul>
   <li><a href="#de-tai">Giới thiệu đề tài</a></li>
   <li><a href="#muc-tieu-chinh">Mục tiêu chính</a></li>
-  <li><a href="#admin">Dành cho Admin</a></li>
+  <li><a href="#tinh-nang">Các tính năng chính</a></li>
   <li><a href="#cong-cu">Các công cụ hỗ trợ tạo và phát triển dự án</a></li>
   <li><a href="#thanh-vien">Các thành viên trong nhóm</a></li>
 </ul>
@@ -29,17 +34,21 @@
   <li>(Mục tiêu này cần được điền thêm nội dung).</li>
 </ol>
 
-<h3 id="admin" align="left">Admin:</h3>
-<ol>
-  <li>Quản lý đơn đặt trước.</li>
-  <li>Quản lý các loại ô tô.</li>
-  <li>Quản lý giá cả.</li>
-</ol>
-
-<div align="center">
-  <img height="200" src="https://cdn.discordapp.com/attachments/1089969551896219728/1164584424025886853/image.png?ex=6543bec3&is=653149c3&hm=7b22695f01abb570152bcabe3c58d5fe6e213dd6d08cf93f75037cff4d764543&" />
-  <img height="200" src="https://cdn.discordapp.com/attachments/1089969551896219728/1164583925469950132/bg_3.jpg?ex=6543be4c&is=6531494c&hm=ffa01b679f000e40d82f91c1013a248fceee933196f59164fb8a9b37e7a69f98&" />
-</div>
+<h3 id="tinh-nang" align="left">Các tính năng chính</h3>
+<ul>
+  <li><strong>Người dùng:</strong>
+    <ul>
+      <li>Đăng kí, đăng nhập</li>
+      <li>Đặt trước ô tô</li>
+    </ul>
+  </li>
+  <li><strong>Admin:</strong>
+    <ul>
+      <li>Quản lý tài khoản người dùng</li>
+      <li>Quản lý đơn đặt trước</li>
+    </ul>
+  </li>
+</ul>
 
 <h3 id="cong-cu">Các công cụ hỗ trợ tạo và phát triển dự án</h3>
 <div align="left">
@@ -74,7 +83,6 @@
       <th>Tên</th>
       <th>MSSV</th>
       <th>%</th>
-      <th>Vai trò</th>
     </tr>
   </thead>
   <tbody>
@@ -82,25 +90,21 @@
       <td>Nguyễn Nhật Tiến</td>
       <td>21DH113015</td>
       <td>100%</td>
-      <th>Scrum master</th>
     </tr>
     <tr>
       <td>Nguyễn Hữu Thọ</td>
       <td>21DH114158</td>
       <td>100%</td>
-      <th>Dev chính</th>
     </tr>
     <tr>
       <td>Trương Thanh Bình</td>
       <td>21DH113051</td>
       <td>100%</td>
-      <th>Project owner</th>
     </tr>
     <tr>
       <td>Vũ Đức Nam</td>
       <td>21DH112701</td>
       <td>100%</td>
-      <th>Tìm kiếm hình ảnh , content</th>
     </tr>
   </tbody>
 </table>
