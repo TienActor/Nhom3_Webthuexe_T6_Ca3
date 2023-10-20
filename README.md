@@ -1,4 +1,4 @@
-<h1 align="center">Dực án thiết kế và tạo website thuê ô tô 🚗🚗.</h1>
+<h1 align="center">Dự án thiết kế và tạo website thuê ô tô 🚗🚗.</h1>
 
 ###
 
@@ -14,7 +14,6 @@
 
 ###
 
-<p align="left">3.</p>
 
 ###
 
