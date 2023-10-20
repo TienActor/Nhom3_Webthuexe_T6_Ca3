@@ -7,15 +7,13 @@
 
 ## Mục lục:
 
-- [I. Giới thiệu đề tài](#i-giới-thiệu-đề-tài)
-- [II. Mục tiêu chính](#ii-mục-tiêu-chính)
-- [III. Các tính năng chính](#iii-các-tính-năng-chính)
-- [IV. Các công cụ hỗ trợ tạo và phát triển dự án](#iv-các-công-cụ-hỗ-trợ-tạo-và-phát-triển-dự-án)
-- [V. Các thành viên trong nhóm](#v-các-thành-viên-trong-nhóm)
+- [I. Giới thiệu đề tài](#de-tai)
+- [II. Mục tiêu chính](#muc-tieu)
+- [III. Các tính năng chính](#tinh-nang)
+- [IV. Các công cụ hỗ trợ tạo và phát triển dự án](#cong-cu)
+- [V. Các thành viên trong nhóm](#thanh-vien)
 
 ### I. Giới thiệu đề tài <a name="de-tai"></a>
-
-<h3 id="de-tai" align="left">I. Giới thiệu đề tài</h3>
 <p>Trong thời đại số hóa như hiện nay, nhu cầu di chuyển và du lịch ngày càng gia tăng. Đồng thời, không phải ai cũng muốn sở hữu một chiếc xe riêng vì nhiều lý do như: tài chính, không gian đỗ xe, hoặc chỉ cần xe trong thời gian ngắn. Đây chính là lúc mà dịch vụ thuê xe ô tô trực tuyến trở nên cần thiết và tiện ích.</p>
 <p>Website Thuê Xe Ô Tô của chúng tôi ra đời nhằm đáp ứng nhu cầu đó. Với giao diện thân thiện và dễ sử dụng, người dùng có thể dễ dàng tìm kiếm, so sánh và thuê một chiếc xe mà họ mong muốn một cách nhanh chóng và tiện lợi.</p>
 <p>Tại sao chọn chúng tôi?</p>
@@ -27,14 +25,14 @@
 </ul>
 <h4>Qua đề tài này, chúng tôi mong muốn mang đến một giải pháp thuê xe trực tuyến hiệu quả, đáng tin cậy và dễ dàng tiếp cận cho mọi người.</h4>
 
-
-<h3 id="muctieu" align="left">II. Mục tiêu chính</h3>
+### II. Mục tiêu chính <a name="muc-tieu"></a>
 <ol>
   <li>Giúp khách hàng xem những loại ô tô đang cho thuê trên website.</li>
   <li>Hỗ trợ khách hàng đặt trước ô tô mình muốn.</li>
+  <li>(Mục tiêu này cần được điền thêm nội dung).</li>
 </ol>
 
-<h3 id="tinhnang" align="left">III. Các tính năng chính</h3>
+### III. Các tính năng chính</h3> <a name="tinh-nang/a>
 <ul>
   <li><strong>Người dùng:</strong>
     <ul>
@@ -46,13 +44,11 @@
     <ul>
       <li>Quản lý tài khoản người dùng</li>
       <li>Quản lý đơn đặt trước</li>
-      <li>Quản lý nhân viên</li>
-      <li>Quản lý đơn tài khoản Admin</li>
     </ul>
   </li>
 </ul>
 
-<h3 id="congcu">IV. Các công cụ hỗ trợ tạo và phát triển dự án</h3>
+### IV. Các công cụ hỗ trợ tạo và phát triển dự án</h3> <a name="cong-cu"></a>
 <div align="left">
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" height="40" alt="csharp logo" />
   <img width="12" />
@@ -75,7 +71,7 @@
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" height="40" alt="github logo" />
 </div>
 
-<h4 id="thanhvien" align="left">V. Các thành viên trong nhóm🧑‍💻🧑‍💻🧑‍💻🧑‍💻(4 người):</h4>
+### V. Các thành viên trong nhóm🧑‍💻🧑‍💻🧑‍💻🧑‍💻(4 người):</h4> <a name="thanh-vien"></a>
 <table>
 <table>
   <thead>
