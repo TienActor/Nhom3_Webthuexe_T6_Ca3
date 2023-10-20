@@ -5,14 +5,15 @@
   <img height="200" src="https://cdn.discordapp.com/attachments/1089969551896219728/1164583925469950132/bg_3.jpg?ex=6543be4c&is=6531494c&hm=ffa01b679f000e40d82f91c1013a248fceee933196f59164fb8a9b37e7a69f98&" />
 </div>
 
-<h2 align="left">Mục lục:</h2>
-<ul>
-  [Giới thiệu](https://github.com/TienActor/Nhom3_Webthuexe_T6_Ca3/blob/main/README.md#i-gi%E1%BB%9Bi-thi%E1%BB%87u-%C4%91%E1%BB%81-t%C3%A0i)
-  <li><a href="#muctieu">II. Mục tiêu chính</a></li>
-  <li><a href="#tinhnang">III. Các tính năng chính</a></li>
-  <li><a href="#congcu">IV. Các công cụ hỗ trợ tạo và phát triển dự án</a></li>
-  <li><a href="#thanhvien">V. Các thành viên trong nhóm</a></li>
-</ul>
+## Mục lục:
+
+- [I. Giới thiệu đề tài](#i-giới-thiệu-đề-tài)
+- [II. Mục tiêu chính](#ii-mục-tiêu-chính)
+- [III. Các tính năng chính](#iii-các-tính-năng-chính)
+- [IV. Các công cụ hỗ trợ tạo và phát triển dự án](#iv-các-công-cụ-hỗ-trợ-tạo-và-phát-triển-dự-án)
+- [V. Các thành viên trong nhóm](#v-các-thành-viên-trong-nhóm)
+
+### I. Giới thiệu đề tài <a name="de-tai"></a>
 
 <h3 id="de-tai" align="left">I. Giới thiệu đề tài</h3>
 <p>Trong thời đại số hóa như hiện nay, nhu cầu di chuyển và du lịch ngày càng gia tăng. Đồng thời, không phải ai cũng muốn sở hữu một chiếc xe riêng vì nhiều lý do như: tài chính, không gian đỗ xe, hoặc chỉ cần xe trong thời gian ngắn. Đây chính là lúc mà dịch vụ thuê xe ô tô trực tuyến trở nên cần thiết và tiện ích.</p>
