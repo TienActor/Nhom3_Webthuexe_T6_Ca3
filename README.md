@@ -2,7 +2,7 @@
 
 <div align="center">
   <img height="200" src="https://cdn.discordapp.com/attachments/1089969551896219728/1164584424025886853/image.png?ex=6543bec3&is=653149c3&hm=7b22695f01abb570152bcabe3c58d5fe6e213dd6d08cf93f75037cff4d764543&" />
-  <img height="200" src="https://cdn.discordapp.com/attachments/1089969551896219728/1164583925469950132/bg_3.jpg?ex=6543be4c&is=6531494c&hm=ffa01b679f000e40d82f91c1013a248fceee933196f59164fb8a9b37e7a69f98&" />
+  <img height="200" src="https://c.wallhere.com/photos/10/ee/GT_R_Nissan_Nissan_GT_R_Super_Car_car_vehicle-1534653.jpg!d" />
 </div>
 
 ## Mục lục:
@@ -26,8 +26,8 @@
 <h4>Qua đề tài này, chúng tôi mong muốn mang đến một giải pháp thuê xe trực tuyến hiệu quả, đáng tin cậy và dễ dàng tiếp cận cho mọi người.</h4>
 <p>Các sản phẩm cho thuê uy tín, đảm bảo chất lượng và hài lòng tất cả khách hàng</p>
 <div align="center">
-  <img height="200" src="" />
-  <img height="200" src="https://cdn.discordapp.com/attachments/1089969551896219728/1164583925469950132/bg_3.jpg?ex=6543be4c&is=6531494c&hm=ffa01b679f000e40d82f91c1013a248fceee933196f59164fb8a9b37e7a69f98&" />
+  <img height="200" src="https://s1.paultan.org/image/2014/01/2014_Toyota_Corolla_Altis_Driven_-098.jpg" />
+  <img height="200" src="https://c.wallhere.com/photos/10/ee/GT_R_Nissan_Nissan_GT_R_Super_Car_car_vehicle-1534653.jpg" />
 </div>
 
 ### II. Mục tiêu chính <a name="muc-tieu"></a>
