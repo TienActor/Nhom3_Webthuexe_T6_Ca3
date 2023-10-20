@@ -7,7 +7,7 @@
 
 <h2 align="left">Mục lục:</h2>
 <ul>
-  <li><a href="#">I. Giới thiệu đề tài</a></li>
+  [Giới thiệu](https://github.com/TienActor/Nhom3_Webthuexe_T6_Ca3/blob/main/README.md#i-gi%E1%BB%9Bi-thi%E1%BB%87u-%C4%91%E1%BB%81-t%C3%A0i)
   <li><a href="#muctieu">II. Mục tiêu chính</a></li>
   <li><a href="#tinhnang">III. Các tính năng chính</a></li>
   <li><a href="#congcu">IV. Các công cụ hỗ trợ tạo và phát triển dự án</a></li>
