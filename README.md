@@ -7,14 +7,14 @@
 
 <h2 align="left">Mục lục:</h2>
 <ul>
-  <li><a href="#detai">I. Giới thiệu đề tài</a></li>
+  <li><a href="#de-tai">I. Giới thiệu đề tài</a></li>
   <li><a href="#muctieu">II. Mục tiêu chính</a></li>
   <li><a href="#tinhnang">III. Các tính năng chính</a></li>
   <li><a href="#congcu">IV. Các công cụ hỗ trợ tạo và phát triển dự án</a></li>
   <li><a href="#thanhvien">V. Các thành viên trong nhóm</a></li>
 </ul>
 
-<h3 id="detai" align="left">I. Giới thiệu đề tài</h3>
+<h3 id="de-tai" align="left">I. Giới thiệu đề tài</h3>
 <p>Trong thời đại số hóa như hiện nay, nhu cầu di chuyển và du lịch ngày càng gia tăng. Đồng thời, không phải ai cũng muốn sở hữu một chiếc xe riêng vì nhiều lý do như: tài chính, không gian đỗ xe, hoặc chỉ cần xe trong thời gian ngắn. Đây chính là lúc mà dịch vụ thuê xe ô tô trực tuyến trở nên cần thiết và tiện ích.</p>
 <p>Website Thuê Xe Ô Tô của chúng tôi ra đời nhằm đáp ứng nhu cầu đó. Với giao diện thân thiện và dễ sử dụng, người dùng có thể dễ dàng tìm kiếm, so sánh và thuê một chiếc xe mà họ mong muốn một cách nhanh chóng và tiện lợi.</p>
 <p>Tại sao chọn chúng tôi?</p>
