@@ -24,7 +24,7 @@
   <li><strong>Bảo mật thông tin:</strong> Cam kết bảo mật thông tin cá nhân và thông tin thanh toán của người dùng.</li>
   <li><strong>Hỗ trợ 24/7:</strong> Dịch vụ hỗ trợ khách hàng sẵn lòng giải đáp mọi thắc mắc và hỗ trợ người dùng.</li>
 </ul>
-<p>Qua đề tài này, chúng tôi mong muốn mang đến một giải pháp thuê xe trực tuyến hiệu quả, đáng tin cậy và dễ dàng tiếp cận cho mọi người.</p>
+<h4>Qua đề tài này, chúng tôi mong muốn mang đến một giải pháp thuê xe trực tuyến hiệu quả, đáng tin cậy và dễ dàng tiếp cận cho mọi người.</h4>
 
 
 <h3 id="2" align="left">II. Mục tiêu chính:</h3>
