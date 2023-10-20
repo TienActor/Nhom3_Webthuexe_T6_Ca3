@@ -26,8 +26,8 @@
 <h4>Qua đề tài này, chúng tôi mong muốn mang đến một giải pháp thuê xe trực tuyến hiệu quả, đáng tin cậy và dễ dàng tiếp cận cho mọi người.</h4>
 <p>Các sản phẩm cho thuê uy tín, đảm bảo chất lượng và hài lòng tất cả khách hàng</p>
 <div align="center">
-  <img height="200" src="https://s1.paultan.org/image/2014/01/2014_Toyota_Corolla_Altis_Driven_-098.jpg" />
-  <img height="200" src="https://c.wallhere.com/photos/10/ee/GT_R_Nissan_Nissan_GT_R_Super_Car_car_vehicle-1534653.jpg" />
+  <img height="200" src="https://vietnam-mercedes.com.vn/wp-content/uploads/2023/08/mercedes-benz_0001_amg-c-43-4matic_230820-02.png" />
+  <img height="200" src="https://vietnam-mercedes.com.vn/wp-content/uploads/2023/02/Mercedes-Maybach-S-450-4MATIC-mau-Xanh-Emerald-02-768x432.jpg" />
 </div>
 
 ### II. Mục tiêu chính <a name="muc-tieu"></a>
