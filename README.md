@@ -29,13 +29,19 @@
   <img height="200" src="https://cdn.discordapp.com/attachments/1089969551896219728/1164584424025886853/image.png?ex=6543bec3&is=653149c3&hm=7b22695f01abb570152bcabe3c58d5fe6e213dd6d08cf93f75037cff4d764543&"  />
 </div>
 
+
+
 ###
 
 <div align="center">
   <img height="200" src="https://cdn.discordapp.com/attachments/1089969551896219728/1164583925469950132/bg_3.jpg?ex=6543be4c&is=6531494c&hm=ffa01b679f000e40d82f91c1013a248fceee933196f59164fb8a9b37e7a69f98&"  />
 </div>
 
-###
+
+
+<h3 align="left">Khách hàng:</h3>
+<p align="left">1. Xem danh sách ô tô.<br>2. Xem chi tiết ô tô<br>3. Tìm ô tô theo loại<br>4. So sánh các loại ô tô<br>5. Đăng kí nơi giao và nhận xe<br>6. Thanh toán trực tiếp</p>
+
 <h3> Các công cụ hỗ trợ tạo và phát triển dự án </h3>
 <br>
 <div align="left">
