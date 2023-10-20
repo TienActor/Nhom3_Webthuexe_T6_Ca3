@@ -32,7 +32,7 @@
   <li>(Mục tiêu này cần được điền thêm nội dung).</li>
 </ol>
 
-### III. Các tính năng chính</h3> <a name="tinh-nang/a>
+### III. Các tính năng chính</h3> <a name="tinh-nang></a>
 <ul>
   <li><strong>Người dùng:</strong>
     <ul>
