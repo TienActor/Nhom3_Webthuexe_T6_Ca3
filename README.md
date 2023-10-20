@@ -7,7 +7,7 @@
 
 <h2 align="left">Mục lục:</h2>
 <ul>
-  <li><a href="1">I. Giới thiệu đề tài</a></li>
+  <li><a href="#1">I. Giới thiệu đề tài</a></li>
   <li><a href="#2">II. Mục tiêu chính</a></li>
   <li><a href="#3">III. Các tính năng chính</a></li>
   <li><a href="#4">IV. Các công cụ hỗ trợ tạo và phát triển dự án</a></li>
