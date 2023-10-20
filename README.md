@@ -25,7 +25,11 @@
 </ul>
 <h4>Qua đề tài này, chúng tôi mong muốn mang đến một giải pháp thuê xe trực tuyến hiệu quả, đáng tin cậy và dễ dàng tiếp cận cho mọi người.</h4>
 <p>Các sản phẩm cho thuê uy tín, đảm bảo chất lượng và hài lòng tất cả khách hàng</p>
-  <li></li>
+<div align="center">
+  <img height="200" src="" />
+  <img height="200" src="https://cdn.discordapp.com/attachments/1089969551896219728/1164583925469950132/bg_3.jpg?ex=6543be4c&is=6531494c&hm=ffa01b679f000e40d82f91c1013a248fceee933196f59164fb8a9b37e7a69f98&" />
+</div>
+
 ### II. Mục tiêu chính <a name="muc-tieu"></a>
 <ol>
   <li>Giúp khách hàng xem những loại ô tô đang cho thuê trên website.</li>
