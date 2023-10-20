@@ -24,7 +24,8 @@
   <li><strong>Hỗ trợ 24/7:</strong> Dịch vụ hỗ trợ khách hàng sẵn lòng giải đáp mọi thắc mắc và hỗ trợ người dùng.</li>
 </ul>
 <h4>Qua đề tài này, chúng tôi mong muốn mang đến một giải pháp thuê xe trực tuyến hiệu quả, đáng tin cậy và dễ dàng tiếp cận cho mọi người.</h4>
-
+<p>Các sản phẩm cho thuê uy tín, đảm bảo chất lượng và hài lòng tất cả khách hàng</p>
+  <li></li>
 ### II. Mục tiêu chính <a name="muc-tieu"></a>
 <ol>
   <li>Giúp khách hàng xem những loại ô tô đang cho thuê trên website.</li>
