@@ -47,6 +47,8 @@
     <ul>
       <li>Quản lý tài khoản người dùng</li>
       <li>Quản lý đơn đặt trước</li>
+      <li>Quản lý nhân viên</li>
+      <li>Quản lý đơn tài khoản Admin</li>
     </ul>
   </li>
 </ul>
