@@ -2,7 +2,7 @@
 
 <div align="center">
   <img height="200" src="https://cdn.discordapp.com/attachments/1089969551896219728/1164584424025886853/image.png?ex=6543bec3&is=653149c3&hm=7b22695f01abb570152bcabe3c58d5fe6e213dd6d08cf93f75037cff4d764543&" />
-  <img height="200" src="https://c.wallhere.com/photos/10/ee/GT_R_Nissan_Nissan_GT_R_Super_Car_car_vehicle-1534653.jpg!d" />
+  <img height="200" src="https://cdn.discordapp.com/attachments/1089969551896219728/1164583925469950132/bg_3.jpg?ex=6543be4c&is=6531494c&hm=ffa01b679f000e40d82f91c1013a248fceee933196f59164fb8a9b37e7a69f98&" />
 </div>
 
 ## Mục lục:
@@ -25,9 +25,22 @@
 </ul>
 <h4>Qua đề tài này, chúng tôi mong muốn mang đến một giải pháp thuê xe trực tuyến hiệu quả, đáng tin cậy và dễ dàng tiếp cận cho mọi người.</h4>
 <p>Các sản phẩm cho thuê uy tín, đảm bảo chất lượng và hài lòng tất cả khách hàng</p>
+<p>Mercedes</p>
 <div align="center">
   <img height="200" src="https://vietnam-mercedes.com.vn/wp-content/uploads/2023/08/mercedes-benz_0001_amg-c-43-4matic_230820-02.png" />
   <img height="200" src="https://vietnam-mercedes.com.vn/wp-content/uploads/2023/02/Mercedes-Maybach-S-450-4MATIC-mau-Xanh-Emerald-02-768x432.jpg" />
+</div>
+
+<p>BMW</p>
+<div align="center">
+  <img height="200" src="https://bmwphunhuan.com.vn/wp-content/uploads/2022/03/x6.png" />
+  <img height="200" src="https://bmwphunhuan.com.vn/wp-content/uploads/2022/12/bmw-4-series-convertible-mui-tran.png" />
+</div>
+
+<p>Toyota</p>
+<div align="center">
+  <img height="200" src="https://toyotabienhoadongnai.net/wp-content/uploads/2022/05/LandCruiserVX300.png" />
+  <img height="200" src="https://toyotabienhoadongnai.net/wp-content/uploads/2023/09/6CD85B8A9D0D4E8F97DFFADF3127E12E-2048x810.png" />
 </div>
 
 ### II. Mục tiêu chính <a name="muc-tieu"></a>
