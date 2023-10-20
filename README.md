@@ -72,10 +72,10 @@
 
 ###
 
-<p align="left">👨‍💻 Nguyễn Nhật Tiến - 21DH113 - 100%
+<p align="left">👨‍💻 Nguyễn Nhật Tiến - 21DH113015 - 100%
   <br>🧑‍💻 Nguyễn Hữu Thọ - 21DH114158 - 100%
-  <br>👨‍💻 Trương Thanh Bình - 21DH - 100%
-  <br>🧑‍💻 Vũ Đức Nam - 21DH - 100%</p>
+  <br>👨‍💻 Trương Thanh Bình - 21DH113051 - 100%
+  <br>🧑‍💻 Vũ Đức Nam - 21DH112701 - 100%</p>
 
 ###
 
