@@ -123,3 +123,21 @@ insert into [cars] values('Mercedes Sprinter','/Content/images/xe/MercedesSprint
 insert into [cars] values('BMW 320i 2013','/Content/images/xe/BMW320i2013a.png',80000,1,5,5,1,N'BMW xe gia đình đời 2013 lên full 2020',N'7 lít/100km','90%')
 insert into [cars] values ('TOYOTA HIACE','/Content/images/xe/ToyotaHiace.png',200000,1,1,3,1,'<p>
 Xe ô tô Toyota Hiace 2023 là thế hệ thứ 6 của dòng Hiace được cải tiến mạnh mẽ về thiết kế và cả tính năng an toàn.</p>','7.5 L/100km','90%')
+
+insert into [cars] values ('TOYOTA NYC','/Content/images/xe/ToyotaNYC.png',200000,1,1,3,1,'<p>
+Xe ô tô Toyota Hiace 2023 là thế hệ thứ 6 của dòng Hiace được cải tiến mạnh mẽ về thiết kế và cả tính năng an toàn.</p>','7.5 L/100km','90%')
+
+insert into [cars] values ('TOYOTA Land Cruiser Prador','/Content/images/xe/TOYOTSCruiser.png',200000,1,1,3,1,'<p>
+Xe ô tô Toyota Hiace 2023 là thế hệ thứ 6 của dòng Hiace được cải tiến mạnh mẽ về thiết kế và cả tính năng an toàn.</p>','7.5 L/100km','90%')
+
+
+insert into [cars] values ('Mescerdes AMG G63','/Content/images/xe/MerG63.png',200000,1,1,3,1,'<p>
+Xe ô tô Toyota Hiace 2023 là thế hệ thứ 6 của dòng Hiace được cải tiến mạnh mẽ về thiết kế và cả tính năng an toàn.</p>','7.5 L/100km','90%')
+
+insert into [cars] values ('Mescerdes AMG C','/Content/images/xe/MerAMGC.png',200000,1,1,3,1,'<p>
+Xe ô tô Toyota Hiace 2023 là thế hệ thứ 6 của dòng Hiace được cải tiến mạnh mẽ về thiết kế và cả tính năng an toàn.</p>','7.5 L/100km','90%')
+
+
+
+
+
