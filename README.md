@@ -47,7 +47,6 @@
 <ol>
   <li>Giúp khách hàng xem những loại ô tô đang cho thuê trên website.</li>
   <li>Hỗ trợ khách hàng đặt trước ô tô mình muốn.</li>
-  <li>(Mục tiêu này cần được điền thêm nội dung).</li>
 </ol>
 
 ### III. Các tính năng chính</h3> <a name="tinh-nang"></a>
