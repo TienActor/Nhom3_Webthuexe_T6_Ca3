@@ -70,6 +70,13 @@
       <li>Quản lý và phân quyền cho nhân viên</li>
     </ul>
   </li>
+   <li><strong>Nhân viên:</strong>
+    <ul>
+      <li>Quản lý tài khoản người dùng</li>
+      <li>Quản lý đơn đặt trước</li>
+       <li>Quản lý số lượng và chi tiết xe</li>
+    </ul>
+  </li>
 </ul>
 
 ### IV. Các công cụ hỗ trợ tạo và phát triển dự án</h3> <a name="cong-cu"></a>
