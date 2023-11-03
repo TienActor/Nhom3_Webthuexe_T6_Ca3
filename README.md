@@ -12,6 +12,7 @@
 - [III. Các tính năng chính](#tinh-nang)
 - [IV. Các công cụ hỗ trợ tạo và phát triển dự án](#cong-cu)
 - [V. Các thành viên trong nhóm](#thanh-vien)
+- [VI.Các hướng phát triển ](#phattrien)
 
 ### I. Giới thiệu đề tài <a name="de-tai"></a>
 <p>Trong thời đại số hóa như hiện nay, nhu cầu di chuyển và du lịch ngày càng gia tăng. Đồng thời, không phải ai cũng muốn sở hữu một chiếc xe riêng vì nhiều lý do như: tài chính, không gian đỗ xe, hoặc chỉ cần xe trong thời gian ngắn. Đây chính là lúc mà dịch vụ thuê xe ô tô trực tuyến trở nên cần thiết và tiện ích.</p>
@@ -59,7 +60,6 @@
       <li>Xem chi tiết xe</li>
       <li>Tìm kiếm theo tên xe</li>
       <li>Tìm kiếm theo hãng xe</li>
-      <li>Chỉnh sửa thông tin</li>
     </ul>
   </li>
   <li><strong>Admin:</strong>
@@ -68,12 +68,6 @@
       <li>Quản lý đơn đặt trước</li>
        <li>Quản lý số lượng và chi tiết xe</li>
       <li>Quản lý và phân quyền cho nhân viên</li>
-    </ul>
-  </li><li><strong>Nhân viên:</strong>
-    <ul>
-      <li>Quản lý tài khoản người dùng</li>
-      <li>Quản lý đơn đặt trước</li>
-       <li>Quản lý số lượng và chi tiết xe</li>
     </ul>
   </li>
 </ul>
@@ -140,3 +134,12 @@
   </tbody>
 </table>
 </table>
+
+### VI. Các hướng phát triển  : </h4> <a name="phattrien"></a>
+
+   <ul>
+      <li>Thanh toán Online</li>
+      <li>Giao xe tận nơi</li>
+       <li>Xem chi nhánh thuê xe gần nhất</li>
+      <li>Thuê xe dài hạn</li>
+    </ul>
