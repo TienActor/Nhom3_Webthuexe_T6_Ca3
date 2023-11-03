@@ -26,16 +26,12 @@
 </ul>
 <h4>Qua đề tài này, chúng tôi mong muốn mang đến một giải pháp thuê xe trực tuyến hiệu quả, đáng tin cậy và dễ dàng tiếp cận cho mọi người.</h4>
 <p>Các sản phẩm cho thuê uy tín, đảm bảo chất lượng và hài lòng tất cả khách hàng</p>
-<p>Mercedes</p>
-<div align="center">
-  <img height="200" src="https://vietnam-mercedes.com.vn/wp-content/uploads/2023/08/mercedes-benz_0001_amg-c-43-4matic_230820-02.png" />
-  <img height="200" src="https://vietnam-mercedes.com.vn/wp-content/uploads/2023/02/Mercedes-Maybach-S-450-4MATIC-mau-Xanh-Emerald-02-768x432.jpg" />
-</div>
+
 
 <p>BMW</p>
 <div align="center">
-  <img height="200" src="https://bmwphunhuan.com.vn/wp-content/uploads/2022/03/x6.png" />
-  <img height="200" src="https://bmwphunhuan.com.vn/wp-content/uploads/2022/12/z4-series.png" />
+    <img height="200" src="https://bmwphunhuan.com.vn/wp-content/uploads/2022/12/z4-series.png" />
+   <img height="200" src="https://vietnam-mercedes.com.vn/wp-content/uploads/2023/08/mercedes-benz_0001_amg-c-43-4matic_230820-02.png" />
 </div>
 
 <p>Toyota</p>
