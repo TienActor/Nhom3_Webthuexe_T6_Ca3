@@ -28,6 +28,7 @@
             <div class="card-body">
                 @using (Html.BeginForm())
                 {
+                    <input type="hidden" name="returnUrl" value="@ViewBag.ReturnUrl" />
                     @Html.AntiForgeryToken()
                     @Html.ValidationSummary(true)
                     <div class="form-group">
@@ -63,11 +64,39 @@
             loader.style.display = 'block';
 
             // Simulate delay
-            setTimeout(function () {
-                // Chuyển trang sau khi delay
-                window.location.href = 'Login.html';
-            }, 2000); // Thay đổi giá trị 2000 thành thời gian delay mong muốn (đơn vị: milliseconds)
+            //setTimeout(function () {
+            //    // Chuyển trang sau khi delay
+            //    window.location.href = 'Login.html';
+            //}, 2000); // Thay đổi giá trị 2000 thành thời gian delay mong muốn (đơn vị: milliseconds)
         });
+        $(document).ready(function () {
+            $('#loginForm').submit(function (event) {
+                event.preventDefault();
+
+                var formData = $(this).serialize();
+
+                $.ajax({
+                    type: 'POST',
+                    url: '/Account/Login',
+                    data: formData,
+                    success: function (response) {
+                        if (response.success) {
+                            // Đăng nhập thành công
+                            // Cập nhật giao diện người dùng tại đây
+                            $('.userNameDisplay').text(response.userName);
+                        } else {
+                            // Xử lý lỗi
+                            alert(response.errorMessage);
+                        }
+                    },
+                    error: function () {
+                        // Xử lý lỗi mạng hoặc lỗi server tại đây
+                        alert('Có lỗi xảy ra, vui lòng thử lại.');
+                    }
+                });
+            });
+        });
+
     </script>
 </body>
 

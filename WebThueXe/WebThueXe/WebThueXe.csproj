@@ -131,11 +131,18 @@
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
     <Compile Include="Areas\Admin\Controllers\AuthController.cs" />
     <Compile Include="Areas\Admin\Controllers\BaseController.cs" />
+    <Compile Include="Areas\Admin\Controllers\employeesController.cs" />
+    <Compile Include="Areas\Admin\Controllers\HomeController.cs" />
+    <Compile Include="Areas\Admin\Controllers\rentsController.cs" />
+    <Compile Include="Areas\Admin\Controllers\typesController.cs" />
     <Compile Include="Areas\Admin\Controllers\XeController.cs" />
     <Compile Include="Areas\Admin\Controllers\KhachHangController.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\CarsController.cs" />
+    <Compile Include="Controllers\CartController.cs" />
+    <Compile Include="Controllers\ContactController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\PricingController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -145,6 +152,7 @@
     <Compile Include="Models\car.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\CartItem.cs" />
     <Compile Include="Models\contact.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -172,12 +180,14 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Model1.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Models\OrderDetailsViewModel.cs" />
     <Compile Include="Models\rent.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\rentDetail.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\RentViewModel.cs" />
     <Compile Include="Models\seat.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -2345,6 +2355,7 @@
     <Content Include="Content\images\bg_1.jpg" />
     <Content Include="Content\images\bg_2.jpg" />
     <Content Include="Content\images\bg_3.jpg" />
+    <Content Include="Content\images\bg_user.png" />
     <Content Include="Content\images\blog.jpg" />
     <Content Include="Content\images\blog\blog.jpg" />
     <Content Include="Content\images\blog\blog1.jpg" />
@@ -2377,10 +2388,15 @@
     <Content Include="Content\images\xe\BMW320i2018a.png" />
     <Content Include="Content\images\xe\BMW320i2018b.png" />
     <Content Include="Content\images\xe\bmw.png" />
+    <Content Include="Content\images\xe\BWMM4.png" />
     <Content Include="Content\images\xe\demo.png" />
     <Content Include="Content\images\xe\Feliz.jpg" />
+    <Content Include="Content\images\xe\ford.png" />
+    <Content Include="Content\images\xe\FordMustang.png" />
+    <Content Include="Content\images\xe\Fordstupendous.png" />
     <Content Include="Content\images\xe\grande.jpg" />
     <Content Include="Content\images\xe\honda.jpg" />
+    <Content Include="Content\images\xe\HuyndaiStaria.png" />
     <Content Include="Content\images\xe\HYUNDAISANTAFE2022a.png" />
     <Content Include="Content\images\xe\HYUNDAISANTAFE2022b.png" />
     <Content Include="Content\images\xe\hyundai.png" />
@@ -2388,8 +2404,10 @@
     <Content Include="Content\images\xe\liberty.jpg" />
     <Content Include="Content\images\xe\loc.png" />
     <Content Include="Content\images\xe\medley.jpg" />
+    <Content Include="Content\images\xe\MerAMGC.png" />
     <Content Include="Content\images\xe\MercedesSprintera.png" />
     <Content Include="Content\images\xe\mercedes.png" />
+    <Content Include="Content\images\xe\MerG63.png" />
     <Content Include="Content\images\xe\passing.jpg" />
     <Content Include="Content\images\xe\piaggio.jpg" />
     <Content Include="Content\images\xe\raider.png" />
@@ -2402,7 +2420,10 @@
     <Content Include="Content\images\xe\sym.jpg" />
     <Content Include="Content\images\xe\Theon.jpg" />
     <Content Include="Content\images\xe\toyota.png" />
+    <Content Include="Content\images\xe\ToyotaCruise.jfif" />
+    <Content Include="Content\images\xe\ToyotaCruise.png" />
     <Content Include="Content\images\xe\ToyotaHiace.png" />
+    <Content Include="Content\images\xe\TOYOTANYC.png" />
     <Content Include="Content\images\xe\user.png" />
     <Content Include="Content\images\xe\Vento.jpg" />
     <Content Include="Content\images\xe\vinfast.jpg" />
@@ -2809,13 +2830,6 @@
     <Content Include="Content\scss\bootstrap\_utilities.scss" />
     <Content Include="Content\scss\bootstrap\_variables.scss" />
     <Content Include="Content\scss\style.scss" />
-    <EntityDeploy Include="Models\Model1.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <Content Include="Models\Model1.edmx.diagram">
-      <DependentUpon>Model1.edmx</DependentUpon>
-    </Content>
     <Content Include="Areas\Admin\Views\Auth\Login.cshtml" />
     <Content Include="Areas\Admin\Views\KhachHang\Add.cshtml" />
     <Content Include="Areas\Admin\Views\KhachHang\Delete.cshtml" />
@@ -2862,6 +2876,28 @@
     <Content Include="Content\tho\vendor\font-awesome\scss\_screen-reader.scss" />
     <Content Include="Content\tho\vendor\font-awesome\scss\_stacked.scss" />
     <Content Include="Content\tho\vendor\font-awesome\scss\_variables.scss" />
+    <Content Include="Areas\Admin\Views\employees\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\employees\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\rents\Bill.cshtml" />
+    <Content Include="Areas\Admin\Views\rents\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\rents\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\rents\rentsDetail.cshtml" />
+    <Content Include="Areas\Admin\Views\types\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\types\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\types\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Home\Mail.cshtml" />
+    <Content Include="Areas\Admin\Views\Home\AllMail.cshtml" />
+    <Content Include="Areas\Admin\Views\Home\_Mail.cshtml" />
+    <Content Include="Areas\Admin\Views\employees\AdminName.cshtml" />
+    <Content Include="Areas\Admin\Views\employees\ChangePsw.cshtml" />
+    <Content Include="Areas\Admin\Views\employees\Rename.cshtml" />
+    <EntityDeploy Include="Models\Model1.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\Model1.edmx.diagram">
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Content>
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -2893,6 +2929,14 @@
     <Content Include="Views\Account\Login.cshtml" />
     <Content Include="Views\Account\Register.cshtml" />
     <Content Include="Views\Cars\CarsList.cshtml" />
+    <Content Include="Views\Cart\Checkout.cshtml" />
+    <Content Include="Views\Cart\Index.cshtml" />
+    <Content Include="Views\Cart\RentSuccess.cshtml" />
+    <Content Include="Views\Contact\Index.cshtml" />
+    <Content Include="Views\Contact\Contact.cshtml" />
+    <Content Include="Views\Pricing\Index.cshtml" />
+    <Content Include="Views\Account\Order.cshtml" />
+    <Content Include="Views\Account\OrderDetails.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -1,0 +1,56 @@
+﻿@model IEnumerable<WebThueXe.Models.RentViewModel>
+
+@{
+    ViewBag.Title = "Đơn Hàng";
+}
+<link rel="stylesheet" href="~/Content/css/style.css">
+
+<section class="hero-wrap hero-wrap-2 js-fullheight" style="background-image: url('../../content/images/bg_3.jpg');" data-stellar-background-ratio="0.5">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row no-gutters slider-text js-fullheight align-items-end justify-content-start">
+            <div class="col-md-9 ftco-animate pb-5">
+                <p class="breadcrumbs"><span class="mr-2"><a href="~/Home">Trang chủ <i class="ion-ios-arrow-forward"></i></a></span> <span>Đơn hàng <i class="ion-ios-arrow-forward"></i></span></p>
+                <h1 class="mb-3 bread">Đơn hàng</h1>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="container mt-4">
+    <h2 class="card-header">Lịch Sử Đơn Hàng</h2>
+    <div class="table-responsive">
+        <table class="table table-hover">
+            <tr>
+                <th>ID Đơn Hàng</th>
+                <th>Ngày Đặt</th>
+                <th>Ghi Chú</th>
+                <th>Tên Khách Hàng</th>
+                <th>Số Điện Thoại</th>
+                <th>Email</th>
+                <th>Trạng Thái</th>
+                <th>Hành Động</th>
+            </tr>
+
+            @foreach (var orderViewModel in Model)
+            {
+                <tr>
+                    <td>@orderViewModel.Rent.id_rent</td>
+                    <td>@orderViewModel.Rent.date</td>
+                    <td>@orderViewModel.Rent.note</td>
+                    <td>@orderViewModel.Rent.name</td>
+                    <td>@orderViewModel.Rent.phone</td>
+                    <td>@orderViewModel.Rent.mail</td>
+                    <td>
+                        @orderViewModel.Status
+                    </td>
+                    <td>
+                        @Html.ActionLink("Xem Chi Tiết", "OrderDetails", new { id = orderViewModel.Rent.id_rent }, new { @class = "btn btn-info" })
+                    </td>
+                </tr>
+            }
+
+
+        </table>
+    </div>
+</div>
+

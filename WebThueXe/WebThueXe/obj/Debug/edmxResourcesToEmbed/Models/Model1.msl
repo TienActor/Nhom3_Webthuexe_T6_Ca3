@@ -86,6 +86,7 @@
           <ScalarProperty Name="phone" ColumnName="phone" />
           <ScalarProperty Name="mail" ColumnName="mail" />
           <ScalarProperty Name="date" ColumnName="date" />
+          <ScalarProperty Name="maKH" ColumnName="maKH" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -96,6 +97,7 @@
           <ScalarProperty Name="id_rent" ColumnName="id_rent" />
           <ScalarProperty Name="id_cars" ColumnName="id_cars" />
           <ScalarProperty Name="amount" ColumnName="amount" />
+          <ScalarProperty Name="maKH" ColumnName="maKH" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

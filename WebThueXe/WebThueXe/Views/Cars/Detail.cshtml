@@ -4,7 +4,6 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 
 }
-
 <section class="hero-wrap hero-wrap-2 js-fullheight" style="background-image: url('../../content/images/bg_3.jpg');" data-stellar-background-ratio="0.5">
     <div class="overlay"></div>
     <div class="container">
@@ -31,7 +30,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-md d-flex align-self-stretch ftco-animate">                                          
+            <div class="col-md d-flex align-self-stretch ftco-animate">
                 <div class="media block-6 services">
                     <div class="media-body py-md-4">
                         <div class="d-flex mb-3 align-items-center">
@@ -78,6 +77,49 @@
                 </div>
             </div>
         </div>
-    </div>
+        <h3>Sản phẩm liên quan</h3>
+        <div class="row">
+            @foreach (var relatedProduct in ViewBag.RelatedProducts as List<WebThueXe.Models.car>)
+            {
+                <div class="car-wrap rounded ftco-animate" style="gap:20px">
+                    <a href="@Url.Action("Details", "Cars", new { idx = relatedProduct.id_cars })" class="img rounded d-flex align-items-end" style="background-image: url('@relatedProduct.image');">
+                        <img src="@relatedProduct.image" alt="@relatedProduct.name" onclick="redirectToProductDetail(@relatedProduct.id_cars)"
+                             class="img rounded d-flex align-items-end" style="justify-items:center;gap:20px" />
+                        <!-- Bỏ img tag và sử dụng background-image cho thẻ a -->
+                    </a>
+                    <div class="text">
+                        <a href="@Url.Action("Details", "Cars", new { idx = relatedProduct.id_cars })">@relatedProduct.name</a>
+                        <span>@(((decimal)relatedProduct.price).ToString("N0"))₫</span>
+                    </div>
+                </div>
+            }
+
+        </div>
+        <style>
+            .row {
+                display: flex;
+                flex-wrap: wrap;
+                margin-right: -15px; /* Điều chỉnh nếu cần */
+                margin-left: -15px; /* Điều chỉnh nếu cần */
+            }
+
+            .car-wrap {
+                margin: 10px; /* Thêm khoảng cách xung quanh mỗi car-wrap */
+                flex: 0 0 calc(30% - 20px); /* Chia đều không gian cho mỗi car-wrap, 20px là tổng của margin-left và margin-right */
+                box-sizing: border-box;
+            }
+
+            .img {
+                width: 100%; /* Chiều rộng hình ảnh sẽ chiếm toàn bộ chiều rộng của car-wrap */
+                height: auto; /* Để giữ tỉ lệ hình ảnh */
+                display: block; /* Đảm bảo hình ảnh không có khoảng trống bên dưới */
+            }
+
+            .car-wrap p,
+            .car-wrap span {
+                text-align: center; /* Căn giữa text dưới hình ảnh */
+                display: block; /* Đảm bảo text hiển thị trên dòng mới */
+            }
+        </style>
 </section>
 

@@ -18,8 +18,10 @@ namespace WebThueXe.Models
         public int id_rent { get; set; }
         public Nullable<int> id_cars { get; set; }
         public Nullable<int> amount { get; set; }
+        public string maKH { get; set; }
     
         public virtual car car { get; set; }
+        public virtual KhachHang KhachHang { get; set; }
         public virtual rent rent { get; set; }
     }
 }

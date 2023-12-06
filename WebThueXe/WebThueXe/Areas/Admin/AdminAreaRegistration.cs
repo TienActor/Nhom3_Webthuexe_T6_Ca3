@@ -2,23 +2,35 @@
 
 namespace WebThueXe.Areas.Admin
 {
-    public class AdminAreaRegistration : AreaRegistration 
+    public class AdminAreaRegistration : AreaRegistration
+{
+    public override string AreaName
     {
-        public override string AreaName 
+        get
         {
-            get 
-            {
-                return "Admin";
-            }
+            return "Admin";
         }
+    }
 
-        public override void RegisterArea(AreaRegistrationContext context) 
-        {
+    public override void RegisterArea(AreaRegistrationContext context)
+    {
+            context.MapRoute(
+                      "AdminLogin",
+                      "Admin/Login",
+                      new { controller = "Auth", action = "Login", id = UrlParameter.Optional }
+                  );
+            context.MapRoute(
+                "AdminLogout",
+                "Admin/Logout",
+                new { controller = "Auth", action = "Logout", id = UrlParameter.Optional }
+            );
             context.MapRoute(
                 "Admin_default",
                 "Admin/{controller}/{action}/{id}",
-                new { controller= "Auth", action = "Login", id = UrlParameter.Optional }
+                new { controller = "Home", action = "Index", id = UrlParameter.Optional },
+                new[] { "WebThueXe.Areas.Admin.Controllers" }
             );
         }
-    }
+}
+
 }

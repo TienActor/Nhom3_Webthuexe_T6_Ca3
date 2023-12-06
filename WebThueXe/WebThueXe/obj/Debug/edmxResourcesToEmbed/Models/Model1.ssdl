@@ -80,6 +80,7 @@
     <Property Name="phone" Type="nvarchar" MaxLength="20" />
     <Property Name="mail" Type="nvarchar" MaxLength="50" />
     <Property Name="date" Type="datetime" />
+    <Property Name="maKH" Type="nvarchar" MaxLength="50" Nullable="false" />
   </EntityType>
   <EntityType Name="rentDetails">
     <Key>
@@ -89,6 +90,7 @@
     <Property Name="id_rent" Type="int" Nullable="false" />
     <Property Name="id_cars" Type="int" />
     <Property Name="amount" Type="int" />
+    <Property Name="maKH" Type="nvarchar" MaxLength="50" Nullable="false" />
   </EntityType>
   <EntityType Name="seat">
     <Key>
@@ -143,6 +145,18 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="FK_rent_kh">
+    <End Role="KhachHang" Type="Self.KhachHang" Multiplicity="1" />
+    <End Role="rent" Type="Self.rent" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="KhachHang">
+        <PropertyRef Name="maKH" />
+      </Principal>
+      <Dependent Role="rent">
+        <PropertyRef Name="maKH" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="FK_rentDetails_cars">
     <End Role="cars" Type="Self.cars" Multiplicity="0..1" />
     <End Role="rentDetails" Type="Self.rentDetails" Multiplicity="*" />
@@ -152,6 +166,18 @@
       </Principal>
       <Dependent Role="rentDetails">
         <PropertyRef Name="id_cars" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_rentDetails_kh">
+    <End Role="KhachHang" Type="Self.KhachHang" Multiplicity="1" />
+    <End Role="rentDetails" Type="Self.rentDetails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="KhachHang">
+        <PropertyRef Name="maKH" />
+      </Principal>
+      <Dependent Role="rentDetails">
+        <PropertyRef Name="maKH" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -190,8 +216,16 @@
       <End Role="type" EntitySet="type" />
       <End Role="cars" EntitySet="cars" />
     </AssociationSet>
+    <AssociationSet Name="FK_rent_kh" Association="Self.FK_rent_kh">
+      <End Role="KhachHang" EntitySet="KhachHang" />
+      <End Role="rent" EntitySet="rent" />
+    </AssociationSet>
     <AssociationSet Name="FK_rentDetails_cars" Association="Self.FK_rentDetails_cars">
       <End Role="cars" EntitySet="cars" />
+      <End Role="rentDetails" EntitySet="rentDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_rentDetails_kh" Association="Self.FK_rentDetails_kh">
+      <End Role="KhachHang" EntitySet="KhachHang" />
       <End Role="rentDetails" EntitySet="rentDetails" />
     </AssociationSet>
     <AssociationSet Name="FK_rentDetails_rent" Association="Self.FK_rentDetails_rent">

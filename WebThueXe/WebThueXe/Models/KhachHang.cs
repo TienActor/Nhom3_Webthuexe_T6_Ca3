@@ -14,11 +14,23 @@ namespace WebThueXe.Models
     
     public partial class KhachHang
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public KhachHang()
+        {
+            this.rents = new HashSet<rent>();
+            this.rentDetails = new HashSet<rentDetail>();
+        }
+    
         public string maKH { get; set; }
         public string hoTenKH { get; set; }
         public string emailKH { get; set; }
         public string sdtKH { get; set; }
         public string diaChiKH { get; set; }
         public string matKhau { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<rent> rents { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<rentDetail> rentDetails { get; set; }
     }
 }

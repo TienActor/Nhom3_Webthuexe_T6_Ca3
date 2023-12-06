@@ -61,6 +61,8 @@
     <Property Name="sdtKH" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
     <Property Name="diaChiKH" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="matKhau" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="rents" Relationship="Self.FK_rent_kh" FromRole="KhachHang" ToRole="rent" />
+    <NavigationProperty Name="rentDetails" Relationship="Self.FK_rentDetails_kh" FromRole="KhachHang" ToRole="rentDetails" />
   </EntityType>
   <EntityType Name="mail">
     <Key>
@@ -84,7 +86,9 @@
     <Property Name="phone" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
     <Property Name="mail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="date" Type="DateTime" Precision="3" />
+    <Property Name="maKH" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
     <NavigationProperty Name="bills" Relationship="Self.FK_bill_rent" FromRole="rent" ToRole="bill" />
+    <NavigationProperty Name="KhachHang" Relationship="Self.FK_rent_kh" FromRole="rent" ToRole="KhachHang" />
     <NavigationProperty Name="rentDetails" Relationship="Self.FK_rentDetails_rent" FromRole="rent" ToRole="rentDetails" />
   </EntityType>
   <EntityType Name="rentDetail">
@@ -95,7 +99,9 @@
     <Property Name="id_rent" Type="Int32" Nullable="false" />
     <Property Name="id_cars" Type="Int32" />
     <Property Name="amount" Type="Int32" />
+    <Property Name="maKH" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
     <NavigationProperty Name="car" Relationship="Self.FK_rentDetails_cars" FromRole="rentDetails" ToRole="cars" />
+    <NavigationProperty Name="KhachHang" Relationship="Self.FK_rentDetails_kh" FromRole="rentDetails" ToRole="KhachHang" />
     <NavigationProperty Name="rent" Relationship="Self.FK_rentDetails_rent" FromRole="rentDetails" ToRole="rent" />
   </EntityType>
   <EntityType Name="seat">
@@ -165,6 +171,30 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="FK_rent_kh">
+    <End Role="KhachHang" Type="Self.KhachHang" Multiplicity="1" />
+    <End Role="rent" Type="Self.rent" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="KhachHang">
+        <PropertyRef Name="maKH" />
+      </Principal>
+      <Dependent Role="rent">
+        <PropertyRef Name="maKH" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_rentDetails_kh">
+    <End Role="KhachHang" Type="Self.KhachHang" Multiplicity="1" />
+    <End Role="rentDetails" Type="Self.rentDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="KhachHang">
+        <PropertyRef Name="maKH" />
+      </Principal>
+      <Dependent Role="rentDetails">
+        <PropertyRef Name="maKH" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="FK_rentDetails_rent">
     <End Role="rent" Type="Self.rent" Multiplicity="1" />
     <End Role="rentDetails" Type="Self.rentDetail" Multiplicity="*" />
@@ -202,6 +232,14 @@
     </AssociationSet>
     <AssociationSet Name="FK_rentDetails_cars" Association="Self.FK_rentDetails_cars">
       <End Role="cars" EntitySet="cars" />
+      <End Role="rentDetails" EntitySet="rentDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_rent_kh" Association="Self.FK_rent_kh">
+      <End Role="KhachHang" EntitySet="KhachHangs" />
+      <End Role="rent" EntitySet="rents" />
+    </AssociationSet>
+    <AssociationSet Name="FK_rentDetails_kh" Association="Self.FK_rentDetails_kh">
+      <End Role="KhachHang" EntitySet="KhachHangs" />
       <End Role="rentDetails" EntitySet="rentDetails" />
     </AssociationSet>
     <AssociationSet Name="FK_rentDetails_rent" Association="Self.FK_rentDetails_rent">

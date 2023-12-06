@@ -1,4 +1,4 @@
-﻿    using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
@@ -74,8 +74,6 @@ namespace WebThueXe.Controllers
             return View(kh);
 
         }
-
-
         public ActionResult CaNhan()
         {
             KhachHang kh = new KhachHang();
@@ -99,7 +97,32 @@ namespace WebThueXe.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.Entry(tblKhachHang).State = EntityState.Modified;
+            
+            if (db.KhachHangs.Any(k => k.maKH == tblKhachHang.maKH))
+            {
+                ModelState.AddModelError("", "Tên tài khoản đã được sử dụng!");
+                return View(tblKhachHang);
+            }
+
+            if (tblKhachHang.matKhau.Length < 6)
+            {
+                ModelState.AddModelError("matKhau", "Mật khẩu phải chứa ít nhất 6 kí tự.");
+                return View(tblKhachHang);
+            }
+
+            if (!tblKhachHang.emailKH.EndsWith("@gmail.com"))
+            {
+                ModelState.AddModelError("emailKH", "Email phải kết thúc bằng '@gmail.com'.");
+                return View(tblKhachHang);
+            }
+
+            // kiểm tra số điện thoại phải bắt đầu bằng số 0 và có 10 chữ số từ 0 -> 9
+            if (!Regex.IsMatch(tblKhachHang.sdtKH, "^0\\d{8,}$"))
+            {
+                ModelState.AddModelError("sdtKH", "Số điện thoại phải bắt đầu bằng số 0 và có ít nhất 9 chữ số.");
+                return View(tblKhachHang);
+            }
+            db.Entry(tblKhachHang).State = EntityState.Modified;
                 db.SaveChanges();
                 Session["KH"] = tblKhachHang;
                 return RedirectToAction("Index", "Home");
@@ -109,7 +132,7 @@ namespace WebThueXe.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Login(KhachHang objUser)
+        public ActionResult Login(KhachHang objUser, string returnUrl)
         {
             if (ModelState.IsValid)
             {
@@ -118,6 +141,10 @@ namespace WebThueXe.Controllers
                 if (obj != null)
                 {
                     Session["KH"] = obj;
+                    if (!string.IsNullOrEmpty(returnUrl))
+                    {
+                        return Redirect(returnUrl); // Chuyển hướng đến returnUrl nếu có
+                    }
                     return RedirectToAction("Index", "Home");
                 }
                 else
@@ -127,19 +154,66 @@ namespace WebThueXe.Controllers
             }
             return View(objUser);
         }
+
         [HttpGet]
-        public ActionResult Login()
+        public ActionResult Login(string returnUrl)
         {
-            Session["KH"] = null;
+            ViewBag.ReturnUrl = returnUrl; // Thêm dòng này
             KhachHang kh = (KhachHang)Session["KH"];
             if (kh != null)
+            {
+                if (!string.IsNullOrEmpty(returnUrl))
+                {
+                    return Redirect(returnUrl);
+                }
                 return RedirectToAction("Index", "Home");
+            }
             return View();
         }
+
         public ActionResult Logout()
         {
             Session["KH"] = null;
             return RedirectToAction("Login", "Account");
         }
+        public ActionResult Order()
+        {
+            var maKH = (Session["KH"] as KhachHang)?.maKH;
+            if (string.IsNullOrEmpty(maKH))
+            {
+                return RedirectToAction("Login", "Account"); // Người dùng phải đăng nhập để xem lịch sử đơn hàng
+            }
+
+            // Lấy danh sách đơn hàng của khách hàng dựa vào maKH và trạng thái từ bảng bills
+            var ordersWithStatus = db.rents
+                                     .Where(r => r.maKH == maKH)
+                                     .Select(r => new RentViewModel
+                                     {
+                                         Rent = r,
+                                         Status = r.bills.Any(b => b.date_end == null) ? "Đang thuê" :
+                     r.bills.Any(b => b.date_end != null) ? "Hoàn thành" : "Chưa bắt đầu"
+                                     }).ToList();
+
+            return View(ordersWithStatus);
+        }
+
+        public ActionResult OrderDetails(int? id)
+    {
+       
+        rent rent = db.rents.Find(id);
+        if (rent == null)
+        {
+            return HttpNotFound();
+        }
+
+        var rentDetails = db.rentDetails.Where(rd => rd.id_rent == id).ToList();
+        var viewModel = new OrderDetailsViewModel
+        {
+            Rent = rent,
+            RentDetails = rentDetails
+        };
+
+        return View(viewModel);
+    }
     }
 }

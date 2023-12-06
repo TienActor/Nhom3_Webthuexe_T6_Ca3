@@ -1,0 +1,66 @@
+﻿@model WebThueXe.Models.OrderDetailsViewModel
+
+@{
+    ViewBag.Title = "Chi Tiết Đơn Hàng";
+}
+
+<section class="hero-wrap hero-wrap-2 js-fullheight" style="background-image: url('../../content/images/bg_3.jpg');" data-stellar-background-ratio="0.5">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row no-gutters slider-text js-fullheight align-items-end justify-content-start">
+            <div class="col-md-9 ftco-animate pb-5">
+                <p class="breadcrumbs">
+                    <span class="mr-2"><a href="@Url.Action("Index", "Home")">Trang chủ <i class="ion-ios-arrow-forward"></i></a></span>
+                    <span>Đơn hàng <i class="ion-ios-arrow-forward"></i></span>
+                </p>
+                <h1 class="mb-3 bread">Chi Tiết Đơn hàng</h1>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="container mt-4">
+    <h2>Chi Tiết Đơn Hàng: @Model.Rent.id_rent</h2>
+    <div>
+        <h3>Thông Tin Đơn Hàng</h3>
+        <p><strong>Ngày Đặt:</strong> @Model.Rent.date</p>
+        <p><strong>Ghi Chú:</strong> @Model.Rent.note</p>
+        <p><strong>Tên Khách Hàng:</strong> @Model.Rent.name</p>
+        <p><strong>Số Điện Thoại:</strong> @Model.Rent.phone</p>
+        <p><strong>Email:</strong> @Model.Rent.mail</p>
+    </div>
+    <h3>Chi Tiết Xe Đặt</h3>
+    <div class="table-responsive">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>ID Xe</th>
+                    <th>Hình Xe</th>
+                    <th>Tên Xe</th>
+                    <th>Số Lượng</th>
+                    <th>Đơn Giá</th>
+                    <th>Thành Tiền</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model.RentDetails)
+                {
+                    if (item != null && item.car != null)
+                    {
+                        <tr>
+                            <td>@item.id_cars</td>
+                            <td><img src="@item.car.image" alt="@item.car.name" style="width:100px; height:100px;"></td>
+                            <td>@item.car.name</td>
+                            <td>@item.amount</td>
+                            <td>@string.Format("{0:N0}", item.car.price).Replace(',', '.')<small>VNĐ</small></td>
+                            <td>@string.Format("{0:N0}", item.amount * item.car.price).Replace(',', '.')<small>VNĐ</small></td>
+                        </tr>
+                    }
+                }
+
+              
+            </tbody>
+        </table>
+    </div>
+    @Html.ActionLink("Quay Lại", "Order", null, new { @class = "btn btn-default" })
+</div>

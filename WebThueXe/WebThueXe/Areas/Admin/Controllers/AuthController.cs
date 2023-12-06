@@ -35,7 +35,7 @@ namespace WebThueXe.Areas.Admin.Controllers
                 if (acc != null)
                 {
                     Session["UserAdmin"] = acc;
-                    return RedirectToAction("Index", "KhachHang");
+                    return RedirectToAction("Index", "Home");
                 }
                 else
                     ViewBag.ThongBao = "Tài khoản hoặc mật khẩu không chính xác!!!";

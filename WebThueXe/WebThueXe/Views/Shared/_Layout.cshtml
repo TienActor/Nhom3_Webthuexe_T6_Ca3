@@ -49,23 +49,24 @@
                     <div class="col-sm-4 col-xs-12"></div>
                     <div class="col-xs-8 text-right menu-1">
                         <ul>
-                            <li class="has-dropdown">
-                                <a href="#">Giới Thiệu</a>
-                            </li>
-                            <li>
-                                <a class="nav-link" href="@Url.Action("Index", "Cars")">Xe</a>
-                            </li>
                             <li>
                                 <a class="nav-link" href="@Url.Action("Index", "Home")">
                                     <i style='font-size:40px' class="glyphicon">&#xe021;</i>
                                 </a>
                             </li>
+
                             <li>
-                                <a class="nav-link" href="#">Giá Cả</a>
+                                <a class="nav-link" href="@Url.Action("Index", "Cars")">Xe</a>
                             </li>
+
+                            <li >
+                                <a class="nav-link" href="@Url.Action("Index", "Pricing")">Giá cả</a>
+                            </li>
+
                             <li>
-                                <a class="nav-link" href="#">Liên hệ</a>
+                                <a class="nav-link" href="@Url.Action("Index","Contact")">Liên hệ</a>
                             </li>
+
                             <li class="has-dropdown">
                                 @{
                                     if (Session["KH"] != null)
@@ -73,8 +74,8 @@
                                         WebThueXe.Models.KhachHang kh = (WebThueXe.Models.KhachHang)Session["KH"];
                                         <a href="#">@kh.hoTenKH</a>
                                         <ul class="dropdown">
-                                            <li><a href="#">Đơn thuê xe</a></li>
-                                            <li><a href="#">Sửa thông tin</a></li>
+                                            <li><a href="@Url.Action("CaNhan","Account")">Sửa thông tin</a></li>
+                                            <li><a href="@Url.Action("Order","Account")">Đơn hàng</a></li>
                                             <li><a onclick="return confirm('Bạn có thực sự muốn đăng xuất ?');" href="@Url.Action("Logout", "Account")">Đăng Xuất</a></li>
                                         </ul>
                                     }

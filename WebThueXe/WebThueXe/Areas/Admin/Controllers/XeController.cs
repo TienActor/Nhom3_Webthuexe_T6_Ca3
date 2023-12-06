@@ -106,7 +106,7 @@ namespace WebThueXe.Areas.Admin.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
         [ValidateInput(false)]
-        public ActionResult Edit([Bind(Include = "id_bike,name,price,IsActive,id_type,IsHot,describe,mass,volumn,size,consume,status")] car bike, HttpPostedFileBase image)
+        public ActionResult Edit([Bind(Include = "id_cars,name,price,IsActive,id_type,IsHot,describe,mass,volumn,size,consume,status")] car bike, HttpPostedFileBase image)
         {
             if (image != null && image.ContentLength > 0)
             {
@@ -115,13 +115,10 @@ namespace WebThueXe.Areas.Admin.Controllers
                 if (System.IO.File.Exists(path))
                 {
                     System.IO.File.Delete(path);
-                    image.SaveAs(path);
                 }
-                else
-                {
-                    image.SaveAs(path);
-                }
-                bike.image = "/Content/images/xe/" + _fn;
+                //bike.image = "/Content/images/xe/" + _fn;
+                image.SaveAs(path);
+                bike.image = "/Content/images/xe/" + _fn; // Sửa đường dẫn ảnh
             }
             else if (image == null)
             {

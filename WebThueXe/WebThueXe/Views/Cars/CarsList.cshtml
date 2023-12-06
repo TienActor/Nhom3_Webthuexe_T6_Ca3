@@ -1,4 +1,4 @@
-﻿@model IEnumerable<WebThueXe.Models.car>
+﻿    @model IEnumerable<WebThueXe.Models.car>
 @foreach (var item in Model)
 {
     <div class="item">
@@ -6,7 +6,7 @@
             <div class="img rounded d-flex align-items-end" style="background-image: url(@item.image);">
             </div>
             <div class="text">
-                <h2 class="mb-0"><a href="#">@item.name</a></h2>
+                <h2 class="mb-0"><a href="@Url.Action("Details", "Cars", new {idx =  item.id_cars})">@item.name</a></h2>
                 <div class="d-flex mb-3">
                     <span class="cat">@item.type.type1</span>
                     <p class="price ml-auto">@item.price <span>/giờ</span></p>

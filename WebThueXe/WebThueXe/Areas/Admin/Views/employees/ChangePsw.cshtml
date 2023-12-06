@@ -1,0 +1,64 @@
+﻿@model WebThueXe.Models.employee
+@{
+    ViewBag.Title = "ChangePsw";
+    Layout = "~/Areas/Admin/Views/Shared/Layout_Admin.cshtml";
+}
+<script src="//ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+@using (Html.BeginForm("ChangePsw", "employees", FormMethod.Post))
+{
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    <div class="card mb-4">
+        <div class="card-header" style="color: #0061f2"><b>Đổi mật khẩu</b></div>
+        <div class="card-body">
+            <input type="number" hidden name="id" value="@Model.id_employee" />
+            <!-- Form Group (current password)-->
+            <div class="mb-3">
+                <label class="small mb-1" for="currentPassword">Mật khẩu hiện tại</label>
+                <input class="form-control" id="currentPassword" name="pswOld" type="password" placeholder="Nhập mật khẩu hiện tại ...">
+                <span id="currentPasswordStatus"></span>
+            </div>
+            <!-- Form Group (new password)-->
+            <div class="mb-3">
+                <label class="small mb-1" for="password">Mật khẩu mới</label>
+                <input class="form-control" id="password" required onkeyup='check();' type="password" placeholder="Nhập mật khẩu mới ...">
+                @Html.ValidationMessageFor(model => model.pass, "", new { @class = "text-danger" })
+            </div>
+            <!-- Form Group (confirm password)-->
+            <div class="mb-3">
+                <label class="small mb-1" for="confirm_password">Xác nhận mật khẩu</label>
+                <input class="form-control" id="confirm_password" name="pswNew" required onkeyup='check();' type="password" placeholder="Xác nhận mật khẩu mới ...">
+            </div>
+            <button class="btn btn-primary" id="changepsw" disabled type="submit">Xác nhận</button>
+        </div>
+    </div>
+}
+<script>
+    var check = function () {
+        if (document.getElementById('password').value ==
+            document.getElementById('confirm_password').value) {
+            document.getElementById('changepsw').disabled = false;
+
+        } else {
+            document.getElementById('changepsw').disabled = true;
+
+        }
+    }
+</script>
+<script>
+    $(document).ready(function () {
+        var verifyPasswordUrl = '@Url.Action("VerifyCurrentPassword", "employees")';
+        $('#currentPassword').keyup(function () {
+            var currentPassword = $(this).val();
+            var id = $('input[name="id"]').val();
+            if (currentPassword.length > 0) {
+                $.post(verifyPasswordUrl, { id: id, currentPassword: currentPassword }, function (isCorrect) {
+                    $('#currentPasswordStatus').html(isCorrect ? '✔️' : '✖️');
+                    $('#currentPasswordStatus').css('color', isCorrect ? 'green' : 'red');
+                });
+            } else {
+                $('#currentPasswordStatus').html('');
+            }
+        });
+    });
+</script>
