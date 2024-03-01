@@ -1,0 +1,567 @@
+use master
+if exists (select * from sysdatabases where name = 'QuanLyKhachSan')
+	drop database QuanLyKhachSan
+go
+create database QuanLyKhachSan
+go
+use QuanLyKhachSan
+go
+---------------------------------------------
+CREATE TABLE CHUCVU
+(
+MaCV CHAR(6),
+TenCV nvarchar(50),
+TienCong1Gio int,
+PRIMARY KEY (MaCV)
+)
+
+CREATE TABLE XE
+(
+MaXe CHAR(6),
+TenXe nvarchar(50),
+SoLuongXe INT,
+GiaThue FLOAT,
+PRIMARY KEY (MaXe)
+)
+
+CREATE TABLE LOAIKH
+(
+MaLKH CHAR(6),
+TenLKH nvarchar(50),
+ChietKhau FLOAT,
+PRIMARY KEY (MaLKH)
+)
+
+CREATE TABLE LOAIPHONG
+(
+MaLPH CHAR(6),
+TenLPH nvarchar(50),
+GiaPH INT,
+SoNguoiToiDa INT,
+SoLuongPH INT,
+MoTa nvarchar(100),
+PRIMARY KEY (MaLPH)
+)
+
+CREATE TABLE PHONG
+(
+MaPH CHAR(6),
+MaLPH CHAR(6),
+PRIMARY KEY (MaPH),
+FOREIGN KEY (MaLPH) REFERENCES LoaiPhong(MaLPH)
+)
+
+CREATE TABLE TRANGTHAI
+(
+IDtt int,
+MaPH CHAR(6),
+TrangThaiPH nvarchar(50),
+PRIMARY KEY (IDtt),
+FOREIGN KEY (MaPH) REFERENCES PHONG(MaPH)
+)
+
+CREATE TABLE NHANVIEN
+(
+MaNV CHAR(6),
+MaCV CHAR(6),
+TenNV nvarchar(50),
+sdtNV CHAR(10),
+diachiNV nvarchar(100),
+GioiTinh nvarchar(5),
+NgaySinhNV DATE,
+PRIMARY KEY (MaNV),
+FOREIGN KEY (MaCV) REFERENCES CHUCVU(MaCV)
+)
+
+CREATE TABLE CHAMCONG
+(
+IDchamcong INT,
+MaNV CHAR(6),
+MaCV CHAR(6),
+SoGioLam INT,
+PRIMARY KEY (IDchamcong),
+FOREIGN KEY (MaCV) REFERENCES CHUCVU(MaCV),
+FOREIGN KEY (MaNV) REFERENCES NHANVIEN(MaNV)
+)
+
+CREATE TABLE LUONG
+(
+IDluong INT,
+MaNV CHAR(6),
+Luong FLOAT,
+Thuong FLOAT,
+TongLuong FLOAT,
+PRIMARY KEY (IDluong),
+FOREIGN KEY (MaNV) REFERENCES NHANVIEN(MaNV)
+)
+
+CREATE TABLE KHACHHANG
+(
+MaKH CHAR(6),
+MaLKH CHAR(6),
+hotenKH nvarchar(50),
+sdtKH CHAR(10),
+emailKH VARCHAR(50),
+diachiKH nvarchar(100),
+GioiTinhKH CHAR(5),
+NgaySinhKH DATE,
+PRIMARY KEY (MaKH),
+FOREIGN KEY (MaLKH) REFERENCES LOAIKH(MaLKH)
+)
+
+CREATE TABLE PHIEUTHUEXE
+(
+MaPTX CHAR(6),
+MaNV CHAR(6),
+MaKH CHAR(6),
+NgayLapPTX DATE,
+PRIMARY KEY (MaPTX),
+FOREIGN KEY (MaNV) REFERENCES NHANVIEN(MaNV),
+FOREIGN KEY (MaKH) REFERENCES KHACHHANG(MaKH)
+)
+
+CREATE TABLE CHITIETTX
+(
+IDtx int,
+MaPTX CHAR(6),
+MaXe CHAR(6),
+SoLuongThue INT,
+TongTienXe FLOAT,
+NgayThueXe DATE,
+NgayTraXe DATE,
+PRIMARY KEY (IDtx),
+FOREIGN KEY (MaPTX) REFERENCES PHIEUTHUEXE(MaPTX),
+FOREIGN KEY (MaXe) REFERENCES XE(MaXe)
+)
+
+CREATE TABLE PHIEUDATPHONG
+(
+MaPDP CHAR(6),
+MaNV CHAR(6),
+MaKH CHAR(6),
+NgayLapPDP DATE,
+PRIMARY KEY (MaPDP),
+FOREIGN KEY (MaKH) REFERENCES KHACHHANG(MaKH),
+FOREIGN KEY (MaNV) REFERENCES NHANVIEN(MaNV)
+)
+
+CREATE TABLE CHITIETDP
+(
+IDdp INT,
+MaPDP CHAR(6),
+MaPH CHAR(6),
+SoLuongDP INT,
+TongTienP FLOAT,
+NgayThueP DATE,
+NgayTraP DATE,
+PRIMARY KEY (IDdp), 
+FOREIGN KEY (MaPH) REFERENCES PHONG(MaPH),
+FOREIGN KEY (MaPDP) REFERENCES PHIEUDATPHONG(MaPDP)
+)
+
+CREATE TABLE HOADON
+(
+MaHD CHAR(6),
+MaPDP CHAR(6),
+MaPTX CHAR(6),
+MaKH CHAR(6),
+TongHD FLOAT,
+NgayLapHD DATE,
+PRIMARY KEY (MaHD),
+FOREIGN KEY (MaPTX) REFERENCES PHIEUTHUEXE(MaPTX),
+FOREIGN KEY (MaPDP) REFERENCES PHIEUDATPHONG(MaPDP),
+FOREIGN KEY (MaKH) REFERENCES KHACHHANG(MaKH)
+)
+-----------------------------------------------
+--select * from CHUCVU
+--select * from LOAIPHONG
+--select * from XE
+--select * from LOAIKH
+--select * from PHONG
+--select * from TRANGTHAI
+--select * from NHANVIEN
+--select * from CHAMCONG
+--select * from LUONG
+--select * from KHACHHANG
+--select * from PHIEUDATPHONG
+--select * from CHITIETDP
+--select * from PHIEUTHUEXE
+--select * from CHITIETTX
+--select * from HOADON
+-----------------------------------------------
+Insert into CHUCVU values 
+('LT', N'Lễ Tân', 40000),
+('NVTX', N'Nhân viên cho thuê xe', 20000),
+('BV', N'Bảo vệ', 50000)
+select * from CHUCVU
+
+INSERT INTO LOAIPHONG VALUES
+('LP1', N'Phòng VIP2', 1500000, 2, 5, N'Phòng cấp cao cho 2 người'),
+('LP2', N'Phòng VIP1', 2000000, 4, 6, N'Phòng cấp cao cho 4 người'),
+('LP3', N'Phòng tầm trung', 1000000, 2, 10, N'Loại phòng tầm trung cho 2 người'),
+('LP4', N'Phòng thường', 500000, 2, 12, N'Loại phòng thường cho 2 người')
+select * from LOAIPHONG
+
+INSERT INTO XE VALUES 
+('Xe01', N'Ariblade', 6, 250000),
+('Xe02', N'Wave', 4, 500000),
+('Xe03', N'Future', 3, 170000)
+select * from XE
+
+Insert into LOAIKH values
+('VIP', N'Vip',0.01),
+('TT', N'Thân thiết', 0.005),
+('CDK', N'Chưa đăng ký', 0)
+select * from LOAIKH
+
+INSERT INTO PHONG VALUES 
+('P001', 'LP1'),
+('P002', 'LP2'),
+('P003', 'LP2')
+select * from PHONG
+
+insert into TRANGTHAI values
+(1, 'P001', N'Bận'),
+(2, 'P002', N'Trống'),
+(3, 'P003', N'Trống')
+select * from TRANGTHAI
+
+Insert into NHANVIEN values
+('NV01', 'NVTX', N'Nguyễn Văn A', '0123456789', N'Tp.Hồ Chí Minh', 'Nam', '2003-12-4'),
+('NV02', 'LT', N'Nguyễn Thị C', '0123456789', N'Tp.Hồ Chí Minh', 'Nữ', '2003-12-4'),
+('NV03', 'BV', N'Nguyễn Văn B', '0123456789', N'Tp.Hồ Chí Minh', 'Nam', '2003-12-4')
+select * from NHANVIEN
+
+insert into CHAMCONG values
+(1, 'NV01', 'NVTX', 8),
+(2, 'NV02', 'LT', 8),
+(3, 'NV03', 'BV', 8)
+select * from CHAMCONG
+
+insert into LUONG values
+(1, 'NV01', 2000, 5000, 10000),
+(2, 'NV02', 2000, 5000, 10000),
+(3, 'NV03', 2000, 5000, 5000)
+select * from LUONG
+
+Insert into KHACHHANG values
+('KH01', 'VIP', N'Nguyễn Văn A', '0123456789', 'A@gmail.com', N'Tp.Hồ Chí Minh', N'Nam', '2003-12-4'),
+('KH02', 'TT', N'Phạm Nguyễn Gia Huy', '0123456789', 'huy@gmail.com', N'Bình Dương', N'Nữ', '2003-1-22'),
+('KH03', 'CDK', N'Lê Ngọc Duy', '0123456789', 'Duy@gmail.com', N'Tp.Hồ Chí Minh', N'Nam', '2000-5-4')
+select * from KHACHHANG
+
+Insert into PHIEUTHUEXE values
+('PTX01', 'NV01', 'KH01', '2023-8-15'),
+('PTX02', 'NV02', 'KH02', '2023-8-20'),
+('PTX03', 'NV03', 'KH03', '2023-12-12')
+select * from PHIEUTHUEXE
+
+insert into CHITIETTX values
+(1, 'PTX01', 'Xe01', 1, 250000, '2023-8-20', '2023-8-30'),
+(2, 'PTX02', 'Xe02', 1, 250000, '2023-8-20', '2023-8-30'),
+(3, 'PTX03', 'Xe03', 1, 250000, '2023-8-20', '2023-8-30')
+select * from CHITIETTX
+
+INSERT INTO PHIEUDATPHONG VALUES
+('PDP01', 'NV02', 'KH01', '2023-8-15'),
+('PDP02', 'NV02', 'KH02', '2023-8-20'),
+('PDP03', 'NV02', 'KH03', '2023-8-25')
+select * from PHIEUDATPHONG
+
+insert into CHITIETDP values
+(1, 'PDP01', 'P001', 2, 2500000, '2023-8-20', '2023-8-30'),
+(2, 'PDP02', 'P001', 2, 2500000, '2023-8-20', '2023-8-30'),
+(3, 'PDP03', 'P001', 2, 2500000, '2023-8-20', '2023-8-30')
+select * from CHITIETDP
+
+insert into HOADON values
+('HD01', 'PDP01', 'PTX01', 'KH01', 1000000, '2023-9-2'),
+('HD02', 'PDP02', 'PTX02', 'KH02', 1000000, '2023-9-2'),
+('HD03', 'PDP03', 'PTX03', 'KH03', 1000000, '2023-9-2')
+select * from HOADON
+
+
+
+
+
+
+
+
+
+
+
+
+
+--Bảng CHUCVU
+Insert into CHUCVU values 
+('LT', N'Lễ Tân', 50000.0, 5000.0),
+('NVTX', N'Nhân viên cho thuê xe', 5000, 5000),
+('BV', N'Bảo vệ', 5000, 5000)
+select * from CHUCVU
+--Bảng LOAIPHONG
+INSERT INTO LOAIPHONG VALUES
+('LP1', N'Phòng VIP2', 1500000, 2, 5, N'Phòng cấp cao cho 2 người'),
+('LP2', N'Phòng VIP1', 2000000, 4, 6, N'Phòng cấp cao cho 4 người'),
+('LP3', N'Phòng tầm trung', 1000000, 2, 10, N'Loại phòng tầm trung cho 2 người'),
+('LP4', N'Phòng thường', 500000, 2, 12, N'Loại phòng thường cho 2 người')
+select * from LOAIPHONG
+--Bảng XE
+INSERT INTO XE VALUES 
+('Xe01', N'Ariblade', 6, 250000),
+('Xe02', N'Wave', 4, 500000),
+('Xe03', N'Future', 3, 170000)
+select * from XE
+--Bảng LOAIKH
+Insert into LOAIKH values
+('VIP', N'Vip',1),
+('TT', N'Thân thiết', 0.5),
+('CDK', N'Chưa đăng ký', 0)
+select * from LOAIKH
+--Bảng PHONG
+INSERT INTO PHONG VALUES 
+('P001', 'LP1', 'X'),
+('P002', 'LP2', 'O'),
+('P003', 'LP2', 'O')
+select * from PHONG
+--Bảng NHANVIEN
+Insert into NHANVIEN values
+('NV01', 'NVTX', N'Nguyễn Văn A', '0123456789', N'Tp.Hồ Chí Minh', '0', '2003-12-4'),
+('NV02', 'LT', N'Nguyễn Thị C', '0123456789', N'Tp.Hồ Chí Minh', '1', '2003-12-4'),
+('NV03', 'BV', N'Nguyễn Văn B', '0123456789', N'Tp.Hồ Chí Minh', '0', '2003-12-4')
+select * from NHANVIEN
+--Bảng CHAMCONG
+insert into CHAMCONG values
+('2003-12-4', 'NV01', 8),
+('2003-12-4', 'NV02', 8),
+('2003-12-4', 'NV03', 8)
+select * from CHAMCONG
+--Bảng LUONG
+insert into LUONG values
+('2003-12-4', 'NV01', 10000),
+('2003-12-4', 'NV02', 10000),
+('2003-12-4', 'NV03', 5000)
+select * from LUONG
+--Bảng KHACHHANG
+Insert into KHACHHANG values
+('KH01', 'VIP', N'Nguyễn Văn A', '0123456789', 'A@gmail.com', N'Tp.Hồ Chí Minh', '0', '2003-12-4'),
+('KH02', 'TT', N'Phạm Nguyễn Gia Huy', '0123456789', 'huy@gmail.com', N'Bình Dương', '0', '2003-1-22'),
+('KH03', 'CDK', N'Lê Ngọc Duy', '0123456789', 'Duy@gmail.com', N'Tp.Hồ Chí Minh', '1', '2000-5-4')
+select * from KHACHHANG
+--Bảng PHIEUTHUEXE
+Insert into PHIEUTHUEXE values
+('PTX01', 'NV01', 'KH01', '2023-8-15'),
+('PTX02', 'NV02', 'KH02', '2023-8-20'),
+('PTX03', 'NV03', 'KH03', '2023-12-12')
+select * from PHIEUTHUEXE
+---Bảng CHITIETTX
+insert into CHITIETTX values
+('PTX01', 'Xe01', 1, 250000, '2023-8-20', '2023-8-30'),
+('PTX02', 'Xe02', 1, 250000, '2023-8-20', '2023-8-30'),
+('PTX03', 'Xe03', 1, 250000, '2023-8-20', '2023-8-30')
+select * from CHITIETTX
+---Bảng PHIEUDATPHONG
+INSERT INTO PHIEUDATPHONG VALUES
+('PDP01', 'NV02', 'KH01', '2023-8-15'),
+('PDP02', 'NV02', 'KH02', '2023-8-20'),
+('PDP03', 'NV02', 'KH03', '2023-8-25')
+select * from PHIEUDATPHONG
+--Bảng CHITIETDP
+insert into CHITIETDP values
+('PDP01', 'P001', 2, 2500000, '2023-8-20', '2023-8-30'),
+('PDP02', 'P001', 2, 2500000, '2023-8-20', '2023-8-30'),
+('PDP03', 'P001', 2, 2500000, '2023-8-20', '2023-8-30')
+select * from CHITIETDP
+--Bảng HOADON
+insert into HOADON values
+('HD01', 'PDP01', 'PTX01', 'KH01', 1000000, 'R', '2023-9-2'),
+('HD02', 'PDP02', 'PTX02', 'KH02', 1000000, 'C', '2023-9-2'),
+('HD03', 'PDP03', 'PTX03', 'KH03', 1000000, 'C', '2023-9-2')
+select * from HOADON
+
+
+
+
+
+
+
+
+
+
+
+CREATE TABLE CHUCVU
+(
+	MaCV CHAR(6) not null,
+	TenCV nvarchar(50) not null,
+	TienCong1Gio DECIMAL(6, 0) not null,
+	TienThuong DECIMAL(10, 2) not null,
+	PRIMARY KEY (MaCV)
+)
+
+CREATE TABLE XE
+(
+	MaXe CHAR(6) not null,
+	TenXe nvarchar(50) not null,
+	SoLuongXe INT not null,
+	GiaThue DECIMAL(10, 2) not null,
+	PRIMARY KEY (MaXe)
+)
+
+CREATE TABLE LOAIKH
+(
+	MaLKH CHAR(6) not null,
+	TenLKH nvarchar(50) not null,
+	ChietKhau DECIMAL(4, 2) not null, 
+	PRIMARY KEY (MaLKH)
+)
+
+CREATE TABLE LOAIPHONG
+(
+	MaLPH CHAR(6) not null,
+	TenLPH nvarchar(50) not null,
+	GiaPH DECIMAL(10, 2) not null,
+	SoKhachToiDa INT not null,
+	SoLuongPH INT not null,
+	MoTa nvarchar(100) not null,
+	PRIMARY KEY (MaLPH)
+)
+
+CREATE TABLE PHONG
+(
+	MaPH CHAR(6) not null,
+	MaLPH CHAR(6) not null,
+	TrangThaiPH char(1)  not null,
+	PRIMARY KEY (MaPH),
+	FOREIGN KEY (MaLPH) REFERENCES LoaiPhong(MaLPH)
+)
+
+CREATE TABLE NHANVIEN
+(
+	MaNV CHAR(6) not null,
+	MaCV CHAR(6) not null,
+	TenNV nvarchar(50) not null,
+	sdtNV CHAR(10) not null,
+	diachiNV nvarchar(100) not null,
+	GioiTinhNV char(1) not null,
+	NgaySinhNV DATE not null,
+	PRIMARY KEY (MaNV),
+	FOREIGN KEY (MaCV) REFERENCES CHUCVU(MaCV)
+)
+
+CREATE TABLE CHAMCONG
+(
+	NgayChamCong date not null,
+	MaNV CHAR(6) not null,
+	SoGioLam INT not null,
+	PRIMARY KEY (NgayChamCong, MaNV),
+	FOREIGN KEY (MaNV) REFERENCES NHANVIEN(MaNV)
+)
+
+CREATE TABLE LUONG
+(
+	NgayPhatLuong date not null,
+	MaNV CHAR(6) not null,
+	TongLuong DECIMAL(10, 2) not null,
+	PRIMARY KEY (NgayPhatLuong, MaNV),
+	FOREIGN KEY (MaNV) REFERENCES NHANVIEN(MaNV)
+)
+
+CREATE TABLE KHACHHANG
+(
+	MaKH CHAR(6) not null,
+	MaLKH CHAR(6) not null,
+	tenKH nvarchar(50) not null,
+	sdtKH CHAR(10) not null,
+	emailKH VARCHAR(50) not null,
+	diachiKH nvarchar(100) not null,
+	GioiTinhKH char(1) not null,
+	NgaySinhKH DATE not null,
+	PRIMARY KEY (MaKH),
+	FOREIGN KEY (MaLKH) REFERENCES LOAIKH(MaLKH)
+)
+
+CREATE TABLE PHIEUTHUEXE
+(
+	MaPTX CHAR(6) not null,
+	MaNV CHAR(6) not null,
+	MaKH CHAR(6) not null,
+	NgayLapPTX DATE not null,
+	PRIMARY KEY (MaPTX),
+	FOREIGN KEY (MaNV) REFERENCES NHANVIEN(MaNV),
+	FOREIGN KEY (MaKH) REFERENCES KHACHHANG(MaKH)
+)
+
+CREATE TABLE CHITIETTX
+(
+	MaPTX CHAR(6) not null,
+	MaXe CHAR(6) not null,
+	SoLuongThue INT not null,
+	TongTienXe DECIMAL(10, 2) not null,
+	NgayThueXe DATE not null,
+	NgayTraXe DATE not null,
+	PRIMARY KEY (MaPTX, MaXe),
+	FOREIGN KEY (MaPTX) REFERENCES PHIEUTHUEXE(MaPTX),
+	FOREIGN KEY (MaXe) REFERENCES XE(MaXe)
+)
+
+CREATE TABLE PHIEUDATPHONG
+(
+	MaPDP CHAR(6) not null,
+	MaNV CHAR(6) not null,
+	MaKH CHAR(6) not null,
+	NgayLapPDP DATE not null,
+	PRIMARY KEY (MaPDP),
+	FOREIGN KEY (MaNV) REFERENCES NHANVIEN(MaNV),
+	FOREIGN KEY (MaKH) REFERENCES KHACHHANG(MaKH)
+)
+
+CREATE TABLE CHITIETDP
+(
+	MaPDP CHAR(6) not null,
+	MaPH CHAR(6) not null,
+	SoLuongDP INT not null,
+	TongTienP DECIMAL(10, 2) not null,
+	NgayThueP DATE not null,
+	NgayTraP DATE not null,
+	PRIMARY KEY (MaPDP, MaPH), 
+	FOREIGN KEY (MaPH) REFERENCES PHONG(MaPH),
+	FOREIGN KEY (MaPDP) REFERENCES PHIEUDATPHONG(MaPDP)
+)
+
+CREATE TABLE HOADON
+(
+	MaHD CHAR(6) not null,
+	MaPDP CHAR(6) not null,
+	MaPTX CHAR(6) not null,
+	MaKH CHAR(6) not null,
+	TongHD DECIMAL(10, 2) not null,
+	TinhTrangHD char(1) not null,
+	NgayLapHD DATE not null,
+	PRIMARY KEY (MaHD),
+	FOREIGN KEY (MaPTX) REFERENCES PHIEUTHUEXE(MaPTX),
+	FOREIGN KEY (MaPDP) REFERENCES PHIEUDATPHONG(MaPDP),
+	FOREIGN KEY (MaKH) REFERENCES KHACHHANG(MaKH)
+)
+--Kiểm tra giới tính nhân viên
+alter table NHANVIEN
+add constraint ktGTnv
+check (GioiTinhNV in ('0','1'))
+--Kiểm tra giới tính khách hàng
+alter table KHACHHANG
+add constraint ktGTkh
+check (GioiTinhKH in ('0','1'))
+--Kiểm tra tình trạng phòng
+alter table PHONG
+add constraint ktTTP
+check (TrangThaiPH in ('X','O'))
+--Kiểm tra tình trạng hóa đơn
+alter table HOADON
+add constraint ktTTHD
+check (TinhTrangHD in ('R','C'))
+--Kiểm tra ngày thuê xe nhỏ hơn ngày trả xe
+alter table CHITIETTX
+add constraint ktNgayTX
+check (NgayThueXe < NgayTraXe)
+--Kiểm tra số giờ làm phỉa lớn hơn không
+alter table CHAMCONG
+add constraint ktSGL
+check (SoGioLam > 0)
